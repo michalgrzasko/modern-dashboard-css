@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons|Leckerli+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <input class="navbar-search__input" id="search-input" type="text" placeholder="I am looking for...">
+
+    <div class="app">
+
+        <div class="sidebar">
+
+            <div class="sidebar__section">
+
+                <a href="#" class="sidebar-logo">
+                    <h1 class="sidebar-logo__text" data-text="MyApp">MyApp</h1>
+                </a>
+
+            </div>
+            <div class="sidebar__section">
+
+                <div class="sidebar-user">
+                    <div class="sidebar-user__avatar-wrapper">
+                        <img class="sidebar-user__avatar" src="https://randomuser.me/api/portraits/women/57.jpg" alt="User">
+                        <a class="sidebar-user__overlay" href="#">
+                            <i class="material-icons sidebar-user__icon">add_a_photo</i>
+                        </a>
+                    </div>
+                    <div class="sidebar-user__name-wrapper">
+                        <a href="#" class="sidebar-user__name">Rita Cook</a>
+                        <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar__section">
+
+                <div class="sidebar-nav">
+                    <h4 class="sidebar-nav__header">Navigation</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--primary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">home</i>
+                                </div>
+                                <span class="sidebar-nav__title">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--primary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">face</i>
+                                </div>
+                                <span class="sidebar-nav__title">Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--primary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">favorite</i>
+                                </div>
+                                <span class="sidebar-nav__title">Favorite</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--primary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">widgets</i>
+                                </div>
+                                <span class="sidebar-nav__title">Widgets</span>
+                                <span class="sidebar-nav__notification">New</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="sidebar__section">
+
+                <div class="sidebar-nav">
+                    <h4 class="sidebar-nav__header">Community</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--secondary sidebar-nav__item--alert">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">notifications_active</i>
+                                </div>
+                                <span class="sidebar-nav__title">Notifications</span>
+                                <span class="sidebar-nav__notification">7</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--secondary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">mail</i>
+                                </div>
+                                <span class="sidebar-nav__title">Mail</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--secondary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">thumb_up</i>
+                                </div>
+                                <span class="sidebar-nav__title">Social</span>
+                                <span class="sidebar-nav__notification">3</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item--secondary">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">date_range</i>
+                                </div>
+                                <span class="sidebar-nav__title">Calendar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="sidebar__section">
+
+                <div class="sidebar-nav">
+                    <h4 class="sidebar-nav__header">Settings</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="sidebar-nav__item">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">person_pin</i>
+                                </div>
+                                <span class="sidebar-nav__title">Profile</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="sidebar-nav__item">
+                                <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">settings</i>
+                                </div>
+                                <span class="sidebar-nav__title">General</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="app__page">
+
+            <div class="navbar">
+
+                <!-- Search bar -->
+                <div class="navbar-search">
+                    <label class="navbar-search__label-icon" for="search-input">
+                        <i class="text text--xxl material-icons navbar-search__icon">search</i>
+                        <span class="text navbar-search__slogan">Search</span>
+                    </label>
+                </div>
+
+                <div class="navbar__wrapper">
+                    <div class="navbar__section">
+
+                        <!-- Lang switcher -->
+                        <div class="navbar-lang-switcher">
+                            <a href="#" class="navbar-lang-switcher__flag--wrapper navbar-lang-switcher__flag--wrapper--active">
+                                <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--polish"></i>
+                                <span class="lang_switcher__country-name">Polski</span>
+                            </a>
+                            <ul class="navbar-lang-switcher__flag-list">
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--italy"></i>
+                                        <span class="lang_switcher__country-name">Italiano</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--greece"></i>
+                                        <span class="lang_switcher__country-name">Greece</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--czech-republic"></i>
+                                        <span class="lang_switcher__country-name">Czech Republic</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--seychelles"></i>
+                                        <span class="lang_switcher__country-name">Seychelles</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--grenadines"></i>
+                                        <span class="lang_switcher__country-name">Grenadines</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--maldives"></i>
+                                        <span class="lang_switcher__country-name">Maldives</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__flag--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--united-states"></i>
+                                        <span class="lang_switcher__country-name">United States</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="navbar__section">
+
+                        <!-- Sidebar user -->
+                        <div class="sidebar-user sidebar-user--slim">
+                            <div class="sidebar-user__avatar-wrapper">
+                                <img class="sidebar-user__avatar" src="https://randomuser.me/api/portraits/women/57.jpg" alt="User">
+                                <a class="sidebar-user__overlay" href="#">
+                                    <i class="material-icons sidebar-user__icon">add_a_photo</i>
+                                </a>
+                            </div>
+                            <div class="sidebar-user__name-wrapper">
+                                <a href="#" class="sidebar-user__name">Rita Cook</a>
+                                <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="navbar__section">
+
+                        <!-- Navbar sign out-->
+                        <div class="navbar-sign-out">
+                            <div class="navbar-sign-out__button-wrapper">
+                                <a href="#" class="navbar-sign-out__button">
+                                    <div class="navbar-sign-out__icon-wrapper">
+                                        <i class="material-icons navbar-sign-out__icon">power_settings_new</i>
+                                        <i class="material-icons navbar-sign-out__icon">sentiment_very_satisfied</i>
+                                    </div>
+                                </a>
+
+                                <div class="navbar-sign-out__letters-wrapper">
+                                    <span class="navbar-sign-out__letter">S</span>
+                                    <span class="navbar-sign-out__letter">i</span>
+                                    <span class="navbar-sign-out__letter">g</span>
+                                    <span class="navbar-sign-out__letter">n</span>
+                                    &nbsp;
+                                    <span class="navbar-sign-out__letter">o</span>
+                                    <span class="navbar-sign-out__letter">u</span>
+                                    <span class="navbar-sign-out__letter">t</span>
+                                </div>
+
+                                <div class="navbar-sign-out__letters-wrapper navbar-sign-out__letters-wrapper--throw">
+                                    <span class="navbar-sign-out__letter">H</span>
+                                    <span class="navbar-sign-out__letter">a</span>
+                                    <span class="navbar-sign-out__letter">v</span>
+                                    <span class="navbar-sign-out__letter">e</span>
+                                    &nbsp;
+                                    <span class="navbar-sign-out__letter">a</span>
+                                    &nbsp;
+                                    <span class="navbar-sign-out__letter">g</span>
+                                    <span class="navbar-sign-out__letter">o</span>
+                                    <span class="navbar-sign-out__letter">o</span>
+                                    <span class="navbar-sign-out__letter">d</span>
+                                    &nbsp;
+                                    <span class="navbar-sign-out__letter">d</span>
+                                    <span class="navbar-sign-out__letter">a</span>
+                                    <span class="navbar-sign-out__letter">y</span>
+                                    <span class="navbar-sign-out__letter">!</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="page-heading">
+                                <div class="page-heading__wrapper">
+                                    <h2 class="page-heading__text">Dashboard</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

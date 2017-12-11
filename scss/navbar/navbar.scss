@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+    background: $grey-50;
+    position: relative; // Upewnienie się, że navbar jest wyżej, niż treść podstrony. Istotne przy rozwinięciu dropdowna
+    z-index: 1;
+
+    .navbar__wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 100%; // Aby obszar klikalny był na całą wysokość navbara.
+
+    }
+
+    .navbar__section {
+        display: flex;
+        align-items: center; // Wycentrowanie linków w poziomie.
+        margin-left: 1rem;
+        height: inherit;
+    }
+
+}

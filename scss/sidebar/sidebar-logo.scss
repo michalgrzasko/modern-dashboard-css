@@ -1,0 +1,50 @@
+@keyframes dash-logo-animation {
+
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+
+}
+
+.sidebar-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: .5rem;
+
+    .sidebar-logo__text {
+        font-family: 'Leckerli One', cursive; // Font naszego logo.
+        color: rgba($primary, .3); // Docelowo nasz tekst ma posłużyć jako cień.
+        font-size: 2.25rem;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: attr(data-text); // Tak naprawdę pseudoelement jest naszą "pierwszą wartstwą" tekstu.
+            position: absolute;
+            left: -.25rem; // Odsunięcie tekstu, aby odkrył cień pod nim.
+            top: -.25rem;
+            color: $primary;
+            text-shadow: -0.1rem -0.1rem #fafafa; // Obrys w kolorze tła.
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%; // Rozciągnięcie tła na całą szerokość tekstu.
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(45deg,
+                    $grey-50 12.5%, // 0 - 12.5% - szary
+                    transparent 12.5%, transparent 37.5%, // 12.5 - 37.5% - transparentny
+                    $grey-50 37.5%, $grey-50 62.5%, // 37.5% - 62.5% szary
+                    transparent 62.5%, transparent 87.5%, // 62.5% - 87.5% - transparentny
+                    $grey-50 87.5%); // 87.5% - 100% szary
+            background-size: .5rem .5rem;
+            animation: dash-logo-animation 7s infinite linear; // Linear jest porządanym typem dla tej animacji.
+        }
+
+    }
+
+}

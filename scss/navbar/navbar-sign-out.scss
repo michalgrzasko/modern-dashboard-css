@@ -1,0 +1,121 @@
+.navbar-sign-out {
+    position: relative;
+
+    .navbar-sign-out__button {
+        position: relative;
+        z-index: 1; // Umiesczenie linka nad napisy na absolucie.
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 6.5rem;
+        height: 2rem;
+        transition: padding $transition-duration;
+
+        &:hover {
+            padding-right: 3.25rem; // Zrobienie miejsca na napis "Are you sure?".
+
+            .navbar-sign-out__icon-wrapper {
+                padding-right: 9.25rem;
+            }
+
+            .navbar-sign-out__icon {
+                color: $primary;
+                opacity: 0;
+
+                &:nth-of-type(2) {
+                    opacity: 1;
+                }
+
+            }
+
+            ~ .navbar-sign-out__letters-wrapper {
+
+                .navbar-sign-out__letter {
+                    opacity: 0;
+
+                    &:nth-of-type(odd) { transform: translateY(-100%); }
+                    &:nth-of-type(even) { transform: translateY(100%); }
+
+                }
+
+                &.navbar-sign-out__letters-wrapper--throw .navbar-sign-out__letter {
+                    color: $primary;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+            }
+
+        }
+
+    }
+
+    .navbar-sign-out__icon-wrapper {
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 2rem;
+        box-shadow: $shadow-2;
+        padding: .5rem 4.25rem .5rem .75rem;
+        transition: padding $transition-duration;
+    }
+
+    .navbar-sign-out__icon {
+        position: absolute; // Aby nałożyć jedną ikonkę na drugą.
+        color: $dark-secondary;
+        left: .75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        font-size: $font-size-lg;
+        transition: opacity $transition-duration, left $transition-duration, color $transition-duration;
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+    }
+
+    .navbar-sign-out__letters-wrapper {
+        display: flex;
+        flex-direction: row; // Ułożenie pojedynczych literek w poziomie.
+        align-items: center;
+        height: 100%; // Aby literki się wycentrowały względem pełnej wysokości.
+        position: absolute;
+        top: 0;
+        left: 2.25rem;
+
+        &.navbar-sign-out__letters-wrapper--throw {
+
+            .navbar-sign-out__letter {
+                opacity: 0;
+
+                &:nth-of-type(odd) { transform: translateY(-100%); }
+                &:nth-of-type(even) { transform: translateY(100%); }
+
+            }
+
+        }
+
+    }
+
+    .navbar-sign-out__letter {
+        color: $dark-secondary;
+        opacity: 1;
+        transition: transform $transition-duration, opacity $transition-duration, color $transition-duration;
+
+        &:nth-of-type(1) { transition-delay: 0s; }
+        &:nth-of-type(2) { transition-delay: .025s; }
+        &:nth-of-type(3) { transition-delay: .05s; }
+        &:nth-of-type(4) { transition-delay: .075s; }
+        &:nth-of-type(5) { transition-delay: .1s; }
+        &:nth-of-type(6) { transition-delay: .125s; }
+        &:nth-of-type(7) { transition-delay: .15s; }
+        &:nth-of-type(8) { transition-delay: .175s; }
+        &:nth-of-type(9) { transition-delay: .2s; }
+        &:nth-of-type(10) { transition-delay: .225s; }
+        &:nth-of-type(11) { transition-delay: .25s; }
+
+    }
+
+}

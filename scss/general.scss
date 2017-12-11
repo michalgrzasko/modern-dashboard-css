@@ -1,0 +1,117 @@
+/**
+ *  Zmienne.
+ */
+
+$primary: #9c27b0;
+$secondary: #ffa726;
+$success: #8BC34A;
+
+$dark: rgba(#000, .87);
+$dark-secondary: rgba(#000, .54);
+$dark-disabled: rgba(#000, .38);
+
+$light: #fff;
+$light-secondary: rgba(#fff, .7);
+$light-disabled: rgba(#fff, .5);
+
+$white: #fff;
+$grey-50: #fafafa;
+$grey-100: #f5f5f5; // Lang switcher hover
+//$grey-300: #e0e0e0; <-- do usunięcia
+
+//$black: #000; <-- do usunięcia
+//$grey-800: #424242; <-- do usunięcia
+//$grey-850: #303030; <-- do usunięcia
+//$grey-900: #212121; <-- do usunięcia
+
+$font-size-xxs: .625rem; // Do malutkich powiadomień w sidebar.
+$font-size-xs: .75rem; // Nagłówki i status usera w sidebar.
+$font-size-sm: .9rem; // Domyślny rozmiar tekstu.
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem; // Ikonki w sidebarze.
+$font-size-xl: 1.5rem; // Tekst w search bar.
+$font-size-xxl: 2rem; // Ikonka aparatu.
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+//$shadow-1: 0 2px 3px rgba(0,0,0,0.12); // <-- do usunięcia
+$shadow-2: 0 5px 15px rgba(0,0,0,0.15); // <-- do usunięcia
+$shadow-3: 0 10px 20px rgba(0,0,0,0.2); // Cień w avatarze i pod ikonką lupki.
+//$shadow-4: 0 14px 28px rgba(0,0,0,0.25); <-- do usunięcia
+//$shadow-5: 0 19px 38px rgba(0,0,0,0.30); <-- do usunięcia
+
+$transition-duration: .2s; // Domyślna szybkość animacji.
+
+// Domyślna wartość 'transition-timing-function' to ease. Tak zostawmy.
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+
+/**
+ * Klasy reużywalne w obrębie całego projektu.
+ */
+
+.text {
+    color: $dark-secondary;
+    font-size: $font-size-sm;
+    line-height: 1.25;
+}
+
+.text--light {
+    color: $light-secondary;
+}
+
+.text--disabled {
+    color: $dark-disabled;
+}
+
+.text--xs { font-size: $font-size-xs; }
+.text--sm { font-size: $font-size-sm; }
+.text--md { font-size: $font-size-md; }
+.text--lg { font-size: $font-size-lg; }
+.text--xl { font-size: $font-size-xl; }
+.text--xxl { font-size: $font-size-xxl; }
+
+/**
+ * Style ogólne.
+ */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    color: $dark-secondary;
+    overflow: hidden;
+}
+
+p, span {
+    color: $dark-secondary;
+    font-size: $font-size-sm;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: $font-size-xxl;
+    color: $dark;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+    transition: transform $transition-duration; // Płynnie transformuje całą stronę przy efekcie 3D.
+    min-height: 100vh; // Rozciągnięcie strony na minimum całą wysokość przeglądarki między innymi na Firefix / Safari.
+}
+
+.app__page {
+    box-shadow: $shadow-3; // Rzuca cień na sidebar.
+    background: $white;
+    width: calc(100% - 12rem); // Główny content ma być na całą szerokość minus szerokość naszego sidebara.
+    position: relative;
+    z-index: 1;
+    //overflow: hidden; // Zapoobiegnięcie rozciąganiu strony wystających, ukrytych elementów np "przycisk Sign out"
+}
