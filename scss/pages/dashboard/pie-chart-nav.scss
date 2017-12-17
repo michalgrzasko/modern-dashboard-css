@@ -1,0 +1,144 @@
+.pie-chart-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transform: translateY(-25%);
+
+    .pie-chart-nav__name {
+        @extend .link;
+        width: calc(33% - .5rem);
+        margin-bottom: -.5rem;
+        padding: .5rem;
+    }
+
+}
+
+.pie-chart-nav__radio {
+    display: none;
+
+    &:checked {
+
+        // Europa
+        &.pie-chart-nav__radio--europe ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) { // CRM
+                .pie-chart__inner-circle {  stroke-dasharray: .73 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '73%'; }
+            }
+
+            &:nth-of-type(2) { // Appki
+                .pie-chart__inner-circle {  stroke-dasharray: .69 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '69%'; }
+            }
+
+            &:nth-of-type(3) { // Inne usługi
+                .pie-chart__inner-circle {  stroke-dasharray: .90 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '90%'; }
+            }
+
+        }
+
+        // Asia
+        &.pie-chart-nav__radio--asia ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) {
+                .pie-chart__inner-circle {  stroke-dasharray: .89 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '89%'; }
+            }
+
+            &:nth-of-type(2) {
+                .pie-chart__inner-circle {  stroke-dasharray: .81 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '81%'; }
+            }
+
+            &:nth-of-type(3) {
+                .pie-chart__inner-circle {  stroke-dasharray: .53 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '53%'; }
+            }
+
+        }
+
+        // North America
+        &.pie-chart-nav__radio--north-america ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) {
+                .pie-chart__inner-circle {  stroke-dasharray: .86 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '86%'; }
+            }
+
+            &:nth-of-type(2) {
+                .pie-chart__inner-circle {  stroke-dasharray: .91 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '91%'; }
+            }
+
+            &:nth-of-type(3) {
+                .pie-chart__inner-circle {  stroke-dasharray: .98 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '98%'; }
+            }
+
+        }
+
+        // South America
+        &.pie-chart-nav__radio--south-america ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) {
+                .pie-chart__inner-circle {  stroke-dasharray: .41 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '41%'; }
+            }
+
+            &:nth-of-type(2) {
+                .pie-chart__inner-circle {  stroke-dasharray: .34 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '34%'; }
+            }
+
+            &:nth-of-type(3) {
+                .pie-chart__inner-circle {  stroke-dasharray: .45 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '45%'; }
+            }
+
+        }
+
+        // Oceania
+        &.pie-chart-nav__radio--oceania ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) {
+                .pie-chart__inner-circle {  stroke-dasharray: .31 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '31%'; }
+            }
+
+            &:nth-of-type(2) {
+                .pie-chart__inner-circle {  stroke-dasharray: .54 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '54%'; }
+            }
+
+            &:nth-of-type(3) {
+                .pie-chart__inner-circle {  stroke-dasharray: .55 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '55%'; }
+            }
+
+        }
+
+        // Africa
+        &.pie-chart-nav__radio--africa ~ .dashboard__pie-charts-wrapper .pie-chart {
+
+            &:nth-of-type(1) {
+                .pie-chart__inner-circle {  stroke-dasharray: .49 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '49%'; }
+            }
+
+            &:nth-of-type(2) {
+                .pie-chart__inner-circle {  stroke-dasharray: .42 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '42%'; }
+            }
+
+            &:nth-of-type(3) {
+                .pie-chart__inner-circle {  stroke-dasharray: .56 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '56%'; }
+            }
+
+        }
+
+    }
+
+}

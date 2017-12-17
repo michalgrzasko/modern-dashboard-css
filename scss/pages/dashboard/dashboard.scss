@@ -1,0 +1,120 @@
+.dashboard {
+    margin: 0 2rem;
+    height: 100%; // Rozciągnięcie, aby dwa contenty obok siebie miały 100% wysokości
+
+    .dashboard__heading {
+        margin-bottom: 2rem;
+
+        &.dashboard__heading--main {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .dashboard__section {
+        box-shadow: $shadow-2;
+        height: calc(100% - 2rem);
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        background: $white;
+        border-radius: .25rem;
+        position: relative; // Do ikonek w prawym górnym rogu sekcji
+
+        &.dashboard__section--small {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &.dashboard__section--transparent {
+            background: #fafafa;
+            box-shadow: none;
+        }
+
+    }
+
+    .dashboard__charts-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .dashboard__chart-wrapper {
+        width: 50%;
+
+        &:nth-of-type(1) { padding-right: 1rem; }
+        &:nth-of-type(2) { padding-left: 1rem; }
+
+    }
+
+    .dashboard__chart-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard__chart-link {
+        padding: 1rem;
+
+        &.dashboard__chart-link--main {
+            margin-right: .5rem;
+        }
+
+    }
+
+    .dashboard__calendar-checkbox {
+        display: none;
+
+        &:checked + .calendar {
+            display: block;
+        }
+
+    }
+
+    .dashboard__calendar-toggler {
+        position: relative;
+        z-index: 101;
+        left: 0;
+        top: 0;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+
+    .dashboard__calendar-toggler-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .dashboard__date {
+        color: $dark-disabled;
+        font-size: $font-size-sm;
+    }
+
+    .dashboard__date-separator {
+        margin: .25rem;
+    }
+
+    .calendar {
+        position: absolute;
+        left: -.25rem;
+        top: -.25rem;
+        z-index: 100;
+        display: none;
+    }
+
+    .dashboard__pie-charts-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .pie-chart {
+            width: calc(100% / 3);
+        }
+
+    }
+
+}

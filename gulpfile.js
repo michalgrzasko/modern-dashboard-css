@@ -28,7 +28,8 @@ gulp.task('server', function () {
 		server: {
 			baseDir: './'
 		},
-		ghostMode: true
+		ghostMode: true,
+		open: false
 	})
 });
 

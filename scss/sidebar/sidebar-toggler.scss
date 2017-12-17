@@ -1,0 +1,58 @@
+.sidebar-toggler__checkbox {
+    position: absolute;
+    z-index: 1;
+
+    &:checked {
+
+        + .sidebar {
+            width: 3.5rem;
+
+            .sidebar-logo__wrapper {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            .sidebar-user {
+                padding: 0 .25rem;
+            }
+
+            .sidebar-user__avatar-wrapper {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .sidebar-user__name-wrapper {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            .sidebar-nav__item {
+                z-index: 2;
+                overflow: hidden;
+                width: 3.5rem;
+
+                &:hover {
+                    background: $grey-50;
+                    width: 9.5rem;
+                    box-shadow: $shadow-2;
+                }
+
+            }
+
+        }
+
+        ~ .app__page {
+            width: calc(100% - 3.5rem);
+        }
+
+    }
+
+
+
+}
+
+.sidebar-toggler {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}

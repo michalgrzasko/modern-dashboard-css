@@ -1,0 +1,168 @@
+$chart-size: 10rem; // Wielkość wykresu
+$chart-border-size: .75rem; // Grubość pierścienia
+
+.progress-chart {
+    position: relative;
+    width: $chart-size;
+    height: $chart-size;
+    border-radius: 50%;
+    background: $grey-100;
+    box-shadow: $shadow-primary;
+    margin: 1.25rem auto 0; // Aby odsunąć od siebie wykresy na mobile oraz 2 przy sobie
+
+    &::before {
+        content: attr(data-percentage) '%';
+        position: absolute;
+        z-index: 5; // Powyżej białego tła
+        top: calc(50% - .75rem);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $font-size-xxl;
+        color: $primary;
+        white-space: nowrap;
+    }
+
+    &::after {
+        content: attr(data-slogan);
+        position: absolute;
+        z-index: 5; // Powyżej białego tła
+        top: calc(50% + .5rem);
+        left: 50%;
+        transform: translateX(-50%); // Tylko left, aby dobrze wyglądało, gdy załamie się na dwie linijki
+        width: calc(100% - 2rem);
+        font-size: $font-size-sm;
+        color: $dark-disabled;
+        text-align: center;
+        line-height: 1.25;
+    }
+
+    .progress-chart__inner-background {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: $chart-size - $chart-border-size;
+        height: $chart-size - $chart-border-size;
+        background: $white;
+    }
+
+    .progress-chart__mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        border: $chart-size / 2 solid;
+        z-index: 2;
+        border-color: transparent $grey-100 transparent transparent;
+        transform: rotate(-135deg);
+    }
+
+    .progress-chart__progress {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        border: $chart-size / 2 solid;
+
+        &.progress-chart__progress--first-part {
+            z-index: 1;
+            border-color: $primary transparent transparent transparent;
+            transform: rotate(-45deg);
+        }
+
+        &.progress-chart__progress--second-part {
+            z-index: 1;
+            border-color: $primary $primary transparent transparent;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+        &.progress-chart__progress--third-part {
+            z-index: 3;
+            border-color: $primary $primary transparent transparent;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+
+    }
+
+    // 100% - 360deg
+    // 25% - 90deg
+
+    // 100% - 360deg
+    // 50% - 180deg
+
+    // 100% - 360deg
+    // 1% - 3.6deg
+
+    $degree: 3.6deg;
+
+    @for $i from 1 through 25 {
+
+        &[data-percentage="#{ $i }"] {
+
+            .progress-chart__progress.progress-chart__progress--first-part {
+                transform: rotate(-45 + $i * $degree);
+            }
+
+        }
+
+        &[data-percentage="#{ 25 + $i }"] {
+
+            .progress-chart__progress.progress-chart__progress--second-part {
+                transform: rotate(-45 + $i * $degree);
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+    @for $i from 1 through 50 {
+
+        &[data-percentage="#{ 50 + $i }"] {
+
+            .progress-chart__progress.progress-chart__progress--second-part { // Dlaczego nie mogę zagnieździć reguł w pętli?
+                transform: rotate(45deg);
+                opacity: 1;
+            }
+
+            .progress-chart__progress.progress-chart__progress--third-part { // -"-
+                transform: rotate(45 + $i * $degree);
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+    &.progress-chart--show-value {
+        box-shadow: $shadow-secondary;
+
+        &::before {
+            content: attr(data-value); // Przykładowo: '11M'...
+            color: $secondary;
+        }
+
+        &::after { content: attr(data-slogan) ' ('attr(data-percentage)'%)'; } // Przykładowo: ...'of spent (23%)'
+
+        .progress-chart__progress {
+
+            &.progress-chart__progress--first-part {  border-top-color : $secondary; } // Kolorowanie tylko poszczególnych krawędzi.
+
+            &.progress-chart__progress--second-part,
+            &.progress-chart__progress--third-part {
+                border-top-color : $secondary; border-right-color : $secondary;
+            }
+
+        }
+
+    }
+
+}

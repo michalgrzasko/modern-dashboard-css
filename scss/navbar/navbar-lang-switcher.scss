@@ -294,6 +294,7 @@ $flag-yellow: #fed141;
         margin-left: -1em; // Wyrównanie flag na ukryrej liście względem aktywnej.
         box-shadow: $shadow-3;
         transition: height .4s;
+        background: rgba($white, .9);
     }
 
 }

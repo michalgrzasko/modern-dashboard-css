@@ -1,34 +1,28 @@
 .navbar-sign-out {
     position: relative;
+    height: 100%; // Cała wysokość navbara.
 
     .navbar-sign-out__button {
         position: relative;
-        z-index: 1; // Umiesczenie linka nad napisy na absolucie.
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 6.5rem;
-        height: 2rem;
+        height: 100%; // Cała wysokość navbara.
         transition: padding $transition-duration;
 
         &:hover {
-            padding-right: 3.25rem; // Zrobienie miejsca na napis "Are you sure?".
-
-            .navbar-sign-out__icon-wrapper {
-                padding-right: 9.25rem;
-            }
 
             .navbar-sign-out__icon {
-                color: $primary;
                 opacity: 0;
 
                 &:nth-of-type(2) {
+                    color: $primary;
                     opacity: 1;
                 }
 
             }
 
-            ~ .navbar-sign-out__letters-wrapper {
+            .navbar-sign-out__letters-wrapper {
 
                 .navbar-sign-out__letter {
                     opacity: 0;
@@ -50,20 +44,10 @@
 
     }
 
-    .navbar-sign-out__icon-wrapper {
-        position: relative;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 2rem;
-        box-shadow: $shadow-2;
-        padding: .5rem 4.25rem .5rem .75rem;
-        transition: padding $transition-duration;
-    }
-
     .navbar-sign-out__icon {
         position: absolute; // Aby nałożyć jedną ikonkę na drugą.
         color: $dark-secondary;
-        left: .75rem;
+        left: 0;
         top: 50%;
         transform: translateY(-50%);
         opacity: 1;
@@ -81,11 +65,12 @@
         flex-direction: row; // Ułożenie pojedynczych literek w poziomie.
         align-items: center;
         height: 100%; // Aby literki się wycentrowały względem pełnej wysokości.
-        position: absolute;
+        position: relative;
         top: 0;
-        left: 2.25rem;
+        margin-left: 1.5rem;
 
         &.navbar-sign-out__letters-wrapper--throw {
+            position: absolute;
 
             .navbar-sign-out__letter {
                 opacity: 0;

@@ -1,0 +1,68 @@
+$chart-circumference: 502.6548245744;
+
+.pie-chart {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pie-chart__wrapper {
+        position: relative;
+    }
+
+    .pie-chart__chart-background {
+        width: 10rem;
+        height: 10rem;
+        background: $grey-50;
+        box-shadow: $shadow-primary;
+        border-radius: 50%;
+    }
+
+    .pie-chart__info {
+        background: rgba($white, 1);
+        box-shadow: $shadow-3;
+        border-radius: 2rem;
+        //padding: 1rem;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        //transform: translate(-50%, -50%);
+
+        &::after {
+            width: 100%;
+            height: 100%;
+            font-size: $font-size-lg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .pie-chart__inner-circle {
+        stroke-dasharray: 0, $chart-circumference; // gap width greater than or equal to the circumference of our circle (C = 2πr, so in our case C = 2π × 30 ≈ 189):
+        fill: $white;
+        stroke: $primary;
+        stroke-width: 10rem;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: stroke-dasharray $transition-duration;
+        opacity: .8;;
+    }
+
+    .pie-chart__title {
+        margin-top: 1rem;
+        color: $dark-disabled;
+    }
+
+    &.pie-chart--secondary {
+        .pie-chart__inner-circle {
+            stroke: $secondary;
+        }
+    }
+
+}

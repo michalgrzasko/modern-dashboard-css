@@ -1,0 +1,39 @@
+.dashboard-form {
+
+    .dashboard-form--lock-icon {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        transform: translateY(-25%);
+    }
+
+    .dashboard-form__field-wrapper {
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .dashboard-form__input {
+        display: block;
+        width: 100%;
+        height: 3rem;
+        border-radius: 2.5rem;
+        border: 1px solid $grey-300;
+        padding: 0 1rem;
+        margin-top: .5rem;
+    }
+
+    .dashboard-form__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 1rem;
+        transform: translateY(-50%);
+        font-size: $font-size-sm;
+        background: $white;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+}

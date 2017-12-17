@@ -8,8 +8,14 @@
 .sidebar-logo {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
     margin-bottom: .5rem;
+
+    .sidebar-logo__wrapper {
+        padding: 0 1rem;
+        transition: opacity $transition-duration, transform $transition-duration; //Do togglera
+    }
 
     .sidebar-logo__text {
         font-family: 'Leckerli One', cursive; // Font naszego logo.

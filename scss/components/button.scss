@@ -1,0 +1,27 @@
+.button-prototype {
+    display: inline-block;
+    color: $white;
+    padding: 1rem;
+    font-size: $font-size-md;
+    border-radius: $font-size-md * 2;
+    background: $gradient-primary;
+    box-shadow: $shadow-primary;
+    cursor: pointer;
+}
+
+.button {
+   @extend .button-prototype;
+
+    &.button--secondary {
+        background: $gradient-secondary;
+        box-shadow: $shadow-secondary;
+    }
+
+    &.button--outline {
+        background: transparent;
+        border: 1px solid $grey-300;
+        color: $dark-secondary;
+        box-shadow: $shadow-2;
+    }
+
+}

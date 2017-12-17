@@ -1,0 +1,19 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    transition: transform $transition-duration; // Płynnie transformuje całą stronę przy efekcie 3D.
+    min-height: 100vh; // Rozciągnięcie strony na minimum całą wysokość przeglądarki między innymi na Firefox / Safari.
+
+    .app__page {
+        box-shadow: $shadow-3; // Rzuca cień na sidebar.
+        background: $white;
+        width: calc(100% - 12rem); // Główny content ma być na całą szerokość minus szerokość naszego sidebara.
+        margin-left: auto;
+        position: relative;
+        z-index: 1;
+        background: $grey-50;
+        //overflow: hidden; // Zapoobiegnięcie rozciąganiu strony wystających, ukrytych elementów np "przycisk Sign out"
+        transition: width $transition-duration; // Do togglera.
+    }
+
+}

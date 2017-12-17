@@ -2,9 +2,14 @@
 @import 'reset';
 @import 'grid';
 @import 'general';
+@import 'app';
+
+// Components.
+@import 'components/button';
 
 // Sidebar.
 @import 'sidebar/sidebar';
+@import 'sidebar/sidebar-toggler';
 @import 'sidebar/sidebar-logo';
 @import 'sidebar/sidebar-user';
 @import 'sidebar/sidebar-nav';
@@ -15,5 +20,11 @@
 @import 'navbar/navbar-lang-switcher';
 @import 'navbar/navbar-sign-out';
 
-// (single) Page.
-@import 'page/page-heading';
+// Dashboard
+@import "pages/dashboard/dashboard";
+@import 'pages/dashboard/calendar';
+@import 'pages/dashboard/progress-chart';
+@import 'pages/dashboard/pie-chart';
+@import 'pages/dashboard/pie-chart-nav';
+@import 'pages/dashboard/dashboard-candidates';
+@import 'pages/dashboard/dashboard-form';

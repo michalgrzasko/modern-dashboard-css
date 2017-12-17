@@ -1,6 +1,8 @@
 .sidebar {
     width: 12rem;
-    background: $grey-50;
+    background: $white;
+    position: relative; // Do sidebar togglera, który jest na absolute
+    transition: width $transition-duration; // Do togglera.
 
     .sidebar__section {
         display: flex;

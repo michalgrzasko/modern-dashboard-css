@@ -1,0 +1,123 @@
+$candidates-number: 6;
+$candidates-percentage: 100% / $candidates-number;
+
+@keyframes candidates-slider {
+
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-$candidates-percentage); }
+
+}
+
+.dashboard-candidates {
+
+    .dashboard-candidates__mask {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 1rem 0; // Aby nie ścinało cienia
+    }
+
+    .dashboard-candidates__wrapper {
+        width: calc(25% * #{$candidates-number});
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        animation: candidates-slider 20s infinite alternate-reverse linear;
+    }
+
+    .dashboard-candidates__card {
+        width: calc(100% / #{$candidates-number} - 2rem);
+        text-align: center;
+        box-shadow: $shadow-2;
+        margin: 0 1rem;
+        background: $white;
+    }
+
+    .dashboard-candidates__info-wrapper {
+        padding: 1rem;
+        margin: .5rem 0;
+    }
+
+    .dashboard-candidates__avatar {
+        border-radius: 50%;
+        box-shadow: $shadow-3;
+        max-width: 100%;
+    }
+
+    .dashboard-candidates__name {
+        margin-top: 1.5rem;
+        color: $dark-disabled;
+    }
+
+    .dashboard-candidates__position {
+        font-size: $font-size-lg;
+        display: block;
+        margin-top: .5rem;
+    }
+
+    .dashboard-candidates__icons-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dashboard-candidates__icon-wrapper {
+        width: calc(100% / 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        position: relative;
+
+        &.dashboard-candidates__icon-wrapper--favourite {
+
+        }
+
+    }
+
+    .dashboard-candidates__star-checkbox {
+        display: none;
+
+        &:checked + .dashboard-candidates__star-icon {
+
+            &::before { opacity: 0; }
+            &::after { opacity: 1; }
+
+        }
+
+    }
+
+    .dashboard-candidates__star-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        &:hover { color: $secondary; }
+
+        &::before, &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Material Icons';
+            transition: $transition-duration;
+            font-size: $font-size-xl;
+        }
+
+        &:before {
+            opacity: 1;
+            content: 'star_border';
+        }
+
+        &:after {
+            opacity: 0;
+            content: 'star';
+            color: $secondary;
+        }
+
+    }
+
+}
