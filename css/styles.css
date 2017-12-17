@@ -2511,6 +2511,25 @@ h3 {
   position: relative;
   overflow: hidden;
   padding: 1rem 0; }
+  .dashboard-candidates .dashboard-candidates__mask::before, .dashboard-candidates .dashboard-candidates__mask::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2rem;
+    z-index: 1; }
+  .dashboard-candidates .dashboard-candidates__mask::before {
+    left: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), color-stop(50%, transparent));
+    background-image: -webkit-linear-gradient(left, #fafafa, transparent 50%);
+    background-image: -o-linear-gradient(left, #fafafa, transparent 50%);
+    background-image: linear-gradient(left, #fafafa, transparent 50%); }
+  .dashboard-candidates .dashboard-candidates__mask::after {
+    right: 0;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), to(#fafafa));
+    background-image: -webkit-linear-gradient(left, transparent 50%, #fafafa);
+    background-image: -o-linear-gradient(left, transparent 50%, #fafafa);
+    background-image: linear-gradient(left, transparent 50%, #fafafa); }
 
 .dashboard-candidates .dashboard-candidates__wrapper {
   width: calc(25% * 6);

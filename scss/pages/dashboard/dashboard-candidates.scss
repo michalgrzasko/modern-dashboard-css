@@ -15,6 +15,27 @@ $candidates-percentage: 100% / $candidates-number;
         position: relative;
         overflow: hidden;
         padding: 1rem 0; // Aby nie ścinało cienia
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 2rem;
+            z-index: 1;
+        }
+
+        &::before {
+            left: 0;
+            background-image: linear-gradient(left, $grey-50, transparent 50%);
+        }
+
+
+        &::after {
+            right: 0;
+            background-image: linear-gradient(left, transparent 50%, $grey-50);
+        }
+
     }
 
     .dashboard-candidates__wrapper {
