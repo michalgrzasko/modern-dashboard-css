@@ -2,7 +2,7 @@
     width: 12rem;
     background: $white;
     position: relative; // Do sidebar togglera, który jest na absolute
-    transition: width $transition-duration; // Do togglera.
+    transition: width $transition-duration; // Do togglera
 
     .sidebar__section {
         display: flex;

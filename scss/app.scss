@@ -13,7 +13,7 @@
         z-index: 1;
         background: $grey-50;
         //overflow: hidden; // Zapoobiegnięcie rozciąganiu strony wystających, ukrytych elementów np "przycisk Sign out"
-        transition: width $transition-duration; // Do togglera.
+        transition: width $transition-duration; // Do togglera
     }
 
 }

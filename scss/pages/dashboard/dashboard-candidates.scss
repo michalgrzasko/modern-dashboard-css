@@ -20,8 +20,8 @@ $candidates-percentage: 100% / $candidates-number;
             content: '';
             position: absolute;
             top: 0;
-            height: 100%;
             width: 2rem;
+            height: 100%;
             z-index: 1;
         }
 
@@ -29,7 +29,6 @@ $candidates-percentage: 100% / $candidates-number;
             left: 0;
             background-image: linear-gradient(left, $grey-50, transparent 50%);
         }
-
 
         &::after {
             right: 0;

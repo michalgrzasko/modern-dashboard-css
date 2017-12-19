@@ -1,15 +1,25 @@
 .sidebar-toggler__checkbox {
-    position: absolute;
-    z-index: 1;
+    display: none;
 
     &:checked {
 
         + .sidebar {
             width: 3.5rem;
 
+            .sidebar-toggler {
+                width: 100%;
+                height: 3rem;
+            }
+
+            .sidebar-toggler__icon {
+                &::before { transform: rotate(30deg); }
+                &::after { transform: rotate(-30deg); }
+            }
+
             .sidebar-logo__wrapper {
-                opacity: 0;
-                transform: translateX(-100%);
+                height: 0;
+                overflow: hidden;
+                // Bez transition, ponieważ efekt nieznaczcy.
             }
 
             .sidebar-user {
@@ -21,9 +31,22 @@
                 height: 3rem;
             }
 
-            .sidebar-user__name-wrapper {
-                opacity: 0;
-                transform: translateX(-100%);
+            .sidebar-user__name {
+                font-size: $font-size-xxs;
+            }
+
+            .sidebar-user__status {
+                font-size: $font-size-xxs;
+            }
+
+            .sidebar-nav__header {
+                // Bez transition, ponieważ efekt nieznaczcy.
+                &::before {
+                    content: attr(data-toggled-shortcut);
+                    margin-right: 2rem;
+                    text-transform: uppercase;
+                }
+
             }
 
             .sidebar-nav__item {
@@ -33,10 +56,18 @@
 
                 &:hover {
                     background: $grey-50;
-                    width: 9.5rem;
-                    box-shadow: $shadow-2;
+                    width: 10rem;
+                    box-shadow: $shadow-2; // Bez transition, ponieważ efekt nieznaczcy.
                 }
 
+            }
+
+            .sidebar-nav__notification {
+                right: .25rem;
+                top: .25rem;
+                padding: .1rem .25rem;
+                font-size: .5rem;
+                // Bez transition, ponieważ efekt nieznaczcy.
             }
 
         }
@@ -53,6 +84,49 @@
 
 .sidebar-toggler {
     position: absolute;
-    z-index: 1;
     right: 0;
+    top: 0;
+    z-index: 1;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: width $transition-duration, height $transition-duration;
+
+    &:hover .sidebar-toggler__icon {
+        //transform: translateX(-.5rem); // Do modyfikacji. przesuwa sie po skosie przez rotate
+
+        &::before, &::after { background: $primary; } // Nie ma transition
+
+    }
+
+    .sidebar-toggler__icon {
+        width: .75rem;
+        height: .5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: .75rem;
+            height: .15rem;
+            border-radius: 1rem;
+            background: $grey-300;
+            transition: transform .4s, background $transition-duration;
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(-30deg);
+        }
+
+        &::after {
+            bottom: 0;
+            transform: rotate(30deg);
+        }
+
+    }
+
 }

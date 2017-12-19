@@ -2,14 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%; // Do togglera
-    transition: padding $transition-duration; //Do togglera
+    padding: 0 1rem;
+    text-align: center; // Gdyby username się załamał do dwóch linijek
+    transition: padding $transition-duration; // Do togglera
 
     .sidebar-user__avatar-wrapper {
         position: relative;
         width: 6rem;
         height: 6rem;
-        transition: width $transition-duration, height $transition-duration; //Do togglera
+        transition: width $transition-duration, height $transition-duration; // Do togglera
 
         &:hover {
 
@@ -58,13 +59,12 @@
         display: flex;
         flex-direction: column;
         margin-top: .75rem;
-        transition: opacity $transition-duration, transform $transition-duration; //Do togglera
     }
 
     .sidebar-user__name {
         font-weight: $font-weight-bold;
         color: $dark-secondary;
-        transition: color $transition-duration;
+        transition: color $transition-duration, font-size $transition-duration; // Font size do togglera
 
         &:hover {
             color: $primary;
@@ -80,6 +80,7 @@
         justify-content: center;
         align-items: center;
         color: $dark-disabled;
+        transition: font-size $transition-duration; // Do togglera
 
         &::after {
             content: '';

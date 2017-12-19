@@ -36,7 +36,7 @@
         position: relative;
         padding: 0 1rem;
         height: 2.5rem;
-        transition: width $transition-duration, background $transition-duration;
+        transition: width $transition-duration, background $transition-duration; // Do togglera.
 
         &:hover {
 
