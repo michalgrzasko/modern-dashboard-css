@@ -1396,6 +1396,203 @@ h3 {
     .dashboard .dashboard__pie-charts-wrapper .pie-chart {
       width: calc(100% / 3); }
 
+.dashboard-clients .dashboard-clients__table {
+  width: 100%; }
+
+.dashboard-clients .dashboard-clients__tr {
+  border-bottom: 1px solid #f5f5f5; }
+  .dashboard-clients .dashboard-clients__tr:nth-of-type(even) {
+    background: #fafafa; }
+
+.dashboard-clients .dashboard-clients__th {
+  padding: 0 .25rem;
+  height: 3.5rem;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 0.9rem;
+  text-align: left;
+  font-weight: 700;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s; }
+  .dashboard-clients .dashboard-clients__th:not(.dashboard-clients__th--not-sortable) {
+    cursor: pointer; }
+    .dashboard-clients .dashboard-clients__th:not(.dashboard-clients__th--not-sortable):hover {
+      color: rgba(0, 0, 0, 0.54); }
+      .dashboard-clients .dashboard-clients__th:not(.dashboard-clients__th--not-sortable):hover::after {
+        opacity: 1; }
+  .dashboard-clients .dashboard-clients__th:nth-of-type(1) {
+    width: 5rem; }
+  .dashboard-clients .dashboard-clients__th::after {
+    content: 'arrow_drop_up';
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 1rem;
+    opacity: 0;
+    position: relative;
+    top: .2rem;
+    -webkit-transition: opacity, -webkit-transform;
+    transition: opacity, -webkit-transform;
+    -o-transition: opacity, transform;
+    transition: opacity, transform;
+    transition: opacity, transform, -webkit-transform;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
+  .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-asc {
+    color: #9c27b0; }
+    .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-asc::after {
+      opacity: 1; }
+    .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-asc:hover {
+      color: #9c27b0; }
+      .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-asc:hover::after {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
+  .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-desc {
+    color: #9c27b0; }
+    .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-desc::after {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+      opacity: 1; }
+    .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-desc:hover {
+      color: #9c27b0; }
+      .dashboard-clients .dashboard-clients__th.dashboard-clients__th--sort-desc:hover::after {
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0); }
+
+.dashboard-clients .dashboard-clients__td {
+  padding: 0 .25rem;
+  height: 3.5rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  position: relative; }
+
+.dashboard-clients .dashboard-clients__onboarding {
+  display: block;
+  color: #fff;
+  border-radius: 1rem;
+  width: 6rem;
+  padding: .5rem 0;
+  text-align: center; }
+  .dashboard-clients .dashboard-clients__onboarding.dashboard-clients__onboarding--pending {
+    background: #ffc673; }
+  .dashboard-clients .dashboard-clients__onboarding.dashboard-clients__onboarding--completed {
+    background: #b462c2; }
+
+.dashboard-clients .dashboard-clients__action-icon {
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: .5rem;
+  margin: -.5rem -.25rem;
+  color: rgba(0, 0, 0, 0.38);
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s; }
+  .dashboard-clients .dashboard-clients__action-icon:hover {
+    color: #9c27b0; }
+
+.dashboard-clients .dashboard-clients__dots {
+  cursor: pointer;
+  display: inline-block;
+  padding: .5rem; }
+  .dashboard-clients .dashboard-clients__dots::before {
+    content: '';
+    display: block;
+    width: .3rem;
+    height: .3rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: -0.5rem 0 0 0 rgba(0, 0, 0, 0.54), 0.5rem 0 0 0 rgba(0, 0, 0, 0.54);
+            box-shadow: -0.5rem 0 0 0 rgba(0, 0, 0, 0.54), 0.5rem 0 0 0 rgba(0, 0, 0, 0.54);
+    -webkit-transition: background, -webkit-box-shadow;
+    transition: background, -webkit-box-shadow;
+    -o-transition: box-shadow, background;
+    transition: box-shadow, background;
+    transition: box-shadow, background, -webkit-box-shadow;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
+  .dashboard-clients .dashboard-clients__dots:hover::before {
+    background: #9c27b0;
+    -webkit-box-shadow: 0.5rem 0 0 0 #9c27b0, -0.5rem 0 0 0 #9c27b0;
+            box-shadow: 0.5rem 0 0 0 #9c27b0, -0.5rem 0 0 0 #9c27b0; }
+
+.dashboard-clients .dashboard-clients__toggler {
+  display: none; }
+  .dashboard-clients .dashboard-clients__toggler:checked + .dashboard-clients__dots::before {
+    background: #9c27b0;
+    -webkit-box-shadow: 0 -0.5rem 0 0 #9c27b0, -0.5rem 0.25rem 0 0 #9c27b0, 0.5rem 0.25rem 0 0 #9c27b0, -0.25rem 0.5rem 0 0 #9c27b0, 0.25rem 0.5rem 0 0 #9c27b0, 0rem 0.75rem 0 0 #9c27b0;
+            box-shadow: 0 -0.5rem 0 0 #9c27b0, -0.5rem 0.25rem 0 0 #9c27b0, 0.5rem 0.25rem 0 0 #9c27b0, -0.25rem 0.5rem 0 0 #9c27b0, 0.25rem 0.5rem 0 0 #9c27b0, 0rem 0.75rem 0 0 #9c27b0; }
+  .dashboard-clients .dashboard-clients__toggler:checked ~ .dashboard-clients__more-actions {
+    display: block; }
+    .dashboard-clients .dashboard-clients__toggler:checked ~ .dashboard-clients__more-actions .dashboard-clients__action {
+      height: 3rem;
+      opacity: 1; }
+
+.dashboard-clients .dashboard-clients__more-actions {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15); }
+
+.dashboard-clients .dashboard-clients__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: background 0.2s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s;
+  transition: background 0.2s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s;
+  -o-transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s;
+  transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s;
+  transition: background 0.2s, box-shadow 0.4s, height 0.4s, opacity 0.2s, -webkit-box-shadow 0.4s; }
+  .dashboard-clients .dashboard-clients__action::before {
+    font-family: 'Material Icons';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 1.25rem; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--edit::before {
+    content: 'edit'; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--remove::before {
+    content: 'delete'; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--email::before {
+    content: 'mail'; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--message::before {
+    content: 'message'; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--note::before {
+    content: 'note_add'; }
+  .dashboard-clients .dashboard-clients__action.dashboard-clients__action--json::before {
+    content: 'code'; }
+  .dashboard-clients .dashboard-clients__action:hover {
+    z-index: 1;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2); }
+
 .calendar {
   background: #fff;
   -webkit-box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);

@@ -93,9 +93,8 @@
     transition: width $transition-duration, height $transition-duration;
 
     &:hover .sidebar-toggler__icon {
-        //transform: translateX(-.5rem); // Do modyfikacji. przesuwa sie po skosie przez rotate
 
-        &::before, &::after { background: $primary; } // Nie ma transition
+        &::before, &::after { background: $primary; }
 
     }
 

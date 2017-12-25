@@ -1,0 +1,247 @@
+.dashboard-clients {
+
+    .dashboard-clients__table {
+        width: 100%;
+    }
+
+    .dashboard-clients__thead {
+        //box-shadow: $shadow-2;
+
+    }
+
+    .dashboard-clients__tbody {
+
+    }
+
+    .dashboard-clients__tr {
+        border-bottom: 1px solid $grey-100;
+
+        &:nth-of-type(even) { background: $grey-50; }
+
+    }
+
+    .dashboard-clients__th { // 'T'able 'H'eader
+        padding: 0 .25rem;
+        height: 3.5rem;
+        vertical-align: middle;
+        color: $dark-disabled;
+        font-size: $font-size-sm;
+        text-align: left;
+        font-weight: $font-weight-bold;
+        transition: color $transition-duration;
+
+        &:not(.dashboard-clients__th--not-sortable) { // "Actions" nie można sortować.
+            cursor: pointer;
+
+            &:hover {
+                color: $dark-secondary;
+
+                &::after { opacity: 1; }
+
+            }
+
+        }
+
+        &:nth-of-type(1) { width: 5rem; }
+
+        &::after {
+            content: 'arrow_drop_up';
+            display: inline-block;
+            font-family: 'Material Icons';
+            font-size: $font-size-md;
+            opacity: 0;
+            position: relative;
+            top: .2rem;
+            transition: opacity, transform;
+            transition-duration: $transition-duration;
+        }
+
+        &.dashboard-clients__th--sort-asc {
+            color: $primary;
+
+            &::after { opacity: 1; }
+
+            &:hover {
+                color: $primary;
+
+                &::after { transform: rotate(180deg); }
+
+            }
+
+         }
+
+        &.dashboard-clients__th--sort-desc {
+            color: $primary;
+
+            &::after {
+                transform: rotate(180deg);
+                opacity: 1;
+            }
+
+            &:hover {
+                color: $primary;
+
+                &::after { transform: rotate(0); }
+
+            }
+
+        }
+
+    }
+
+    .dashboard-clients__td { // 'T'able 'D'ata
+        padding: 0 .25rem;
+        height: 3.5rem;
+        vertical-align: middle;
+        font-size: $font-size-sm;
+        position: relative; // Do pozycjonownia dropdownu w More Actions
+    }
+
+    .dashboard-clients__onboarding {
+        display: block;
+        color: $white;
+        border-radius: 1rem;
+        width: 6rem;
+        padding: .5rem 0;
+        text-align: center;
+
+        &.dashboard-clients__onboarding--pending {
+            background: lighten($secondary, 15%)
+        }
+
+        &.dashboard-clients__onboarding--completed {
+            background: adjust-color($primary, $saturation: -20%, $lightness: 15%);
+        }
+
+    }
+
+    .dashboard-clients__action-icon {
+        cursor: pointer;
+        font-size: $font-size-lg;
+        padding: .5rem;
+        margin: -.5rem -.25rem;
+        color: $dark-disabled;
+        transition: color $transition-duration;
+
+        &:last-of-type {
+            //margin-left: -.25rem;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+
+    }
+
+    .dashboard-clients__dots {
+        cursor: pointer;
+        display: inline-block;
+        padding: .5rem;
+
+        &::before {
+            content: '';
+            display: block;
+            width: .3rem;
+            height: .3rem;
+            border-radius: 50%;
+            background: $dark-secondary;
+            box-shadow: -.5rem 0 0 0 $dark-secondary, .5rem 0 0 0 $dark-secondary;
+            transition: box-shadow, background;
+            transition-duration: $transition-duration;
+        }
+
+        &:hover {
+
+            &::before {
+                background: $primary;
+                box-shadow: .5rem 0 0 0 $primary, -.5rem 0 0 0 $primary;
+            }
+
+        }
+
+
+    }
+
+    .dashboard-clients__toggler {
+        display: none;
+
+        &:checked {
+
+            + .dashboard-clients__dots {
+
+                &::before {
+                    background: $primary;
+                    box-shadow:
+                            0 -.5rem 0 0 $primary,
+                            -.5rem .25rem 0 0 $primary,
+                            .5rem .25rem 0 0 $primary,
+                            -.25rem .5rem 0 0 $primary,
+                            .25rem .5rem 0 0 $primary,
+                            0rem .75rem 0 0 $primary;
+                }
+
+            }
+
+            ~ .dashboard-clients__more-actions {
+                display: block;
+
+                .dashboard-clients__action {
+                    height: 3rem;
+                    opacity: 1;
+                }
+
+            }
+
+        }
+
+    }
+
+    .dashboard-clients__more-actions {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 100%;
+        background: $white;
+        box-shadow: $shadow-2;
+    }
+
+    .dashboard-clients__action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: $white;
+        cursor: pointer;
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 1.5rem;
+        font-size: $font-size-md;
+        white-space: nowrap;
+        height: 0;
+        opacity: 0;
+        transition: background $transition-duration, box-shadow .4s, height .4s, opacity $transition-duration;
+
+        &::before {
+            font-family: 'Material Icons';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: $font-size-lg;
+        }
+
+        &.dashboard-clients__action--edit::before { content: 'edit'; }
+        &.dashboard-clients__action--remove::before { content: 'delete'; }
+        &.dashboard-clients__action--email::before { content: 'mail'; }
+        &.dashboard-clients__action--message::before { content: 'message'; }
+        &.dashboard-clients__action--note::before { content: 'note_add'; }
+        &.dashboard-clients__action--json::before { content: 'code'; }
+
+        &:hover {
+            z-index: 1;
+            background-color: $grey-100;
+            box-shadow: $shadow-3;
+        }
+
+    }
+
+}
