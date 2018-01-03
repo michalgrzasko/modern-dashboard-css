@@ -115,7 +115,7 @@ $candidates-percentage: 100% / $candidates-number;
         height: 100%;
         cursor: pointer;
 
-        &:hover { color: $secondary; }
+        &:hover, &:focus { color: $secondary; }
 
         &::before, &::after {
             position: absolute;
@@ -137,6 +137,38 @@ $candidates-percentage: 100% / $candidates-number;
             content: 'star';
             color: $secondary;
         }
+
+    }
+
+}
+
+@media (max-width: 75rem) {
+
+    .dashboard-candidates {
+
+        .dashboard-candidates__wrapper { width: calc(100% / 3 * #{$candidates-number}); }
+
+    }
+
+}
+
+@media (max-width: 62rem) {
+
+    .dashboard-candidates {
+
+        .dashboard-candidates__wrapper { width: calc(50% * #{$candidates-number}); }
+
+    }
+
+}
+
+@media (max-width: 30rem) {
+
+    .dashboard-candidates {
+
+        .dashboard-candidates__wrapper { width: calc(100% * #{$candidates-number}); }
+
+        .dashboard-candidates__info-wrapper { padding: 0 1rem; }
 
     }
 

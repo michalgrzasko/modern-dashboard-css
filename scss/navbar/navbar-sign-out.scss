@@ -10,7 +10,7 @@
         height: 100%; // Cała wysokość navbara.
         transition: padding $transition-duration;
 
-        &:hover {
+        &:hover, &:focus {
 
             .navbar-sign-out__icon {
                 opacity: 0;

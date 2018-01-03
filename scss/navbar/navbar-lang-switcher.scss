@@ -30,7 +30,7 @@ $flag-yellow: #fed141;
         &:not(.navbar-lang-switcher__flag--wrapper--active) {
             padding: 0 1rem;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: $grey-100;
                 box-shadow: $shadow-3;
             }

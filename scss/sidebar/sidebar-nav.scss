@@ -38,7 +38,8 @@
         height: 2.5rem;
         transition: width $transition-duration, background $transition-duration; // Do togglera.
 
-        &:hover {
+        &:hover, &:focus {
+            outline: none;
 
             .sidebar-nav__icon,
             .sidebar-nav__title {
@@ -60,7 +61,7 @@
                 background: $primary;
             }
 
-            &:hover {
+            &:hover, &:focus {
 
                 &::before, &::after {
                     left: 0;
@@ -87,7 +88,7 @@
                 transition: color $transition-duration, transform $transition-duration, opacity $transition-duration;
             }
 
-            &:hover {
+            &:hover, &:focus  {
 
                 color: $secondary;
 

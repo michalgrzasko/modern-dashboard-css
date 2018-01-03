@@ -21,7 +21,7 @@
                 <i class="sidebar-toggler__icon"></i>
             </label>
 
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--logo">
 
                 <div class="sidebar-logo">
                     <a href="#" class="sidebar-logo__wrapper">
@@ -31,7 +31,7 @@
 
             </div>
 
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--user">
 
                 <div class="sidebar-user">
                     <div class="sidebar-user__avatar-wrapper">
@@ -48,7 +48,7 @@
 
             </div>
 
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--nav">
 
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-shortcut="Nav">Navigation</h4>
@@ -91,7 +91,7 @@
 
             </div>
 
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--nav">
 
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-shortcut="Com">Community</h4>
@@ -135,7 +135,7 @@
 
             </div>
 
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section--nav">
 
                 <div class="sidebar-nav">
                     <h4 class="sidebar-nav__header" data-toggled-shortcut="Set">Settings</h4>
@@ -303,14 +303,14 @@
                             <div class="dashboard__section">
 
                                 <div class="dashboard__heading">
-                                    <h3>Clients</h3>
+                                    <h3>New Clients</h3>
                                 </div>
 
                                 <div class="dashboard-clients">
 
                                     <table class="dashboard-clients__table">
                                         <thead class="dashboard-clients__thead">
-                                            <tr class="dashboard-clients__tr">
+                                            <tr class="dashboard-clients__tr dashboard-clients__tr--heading"> <!-- Aby ukryć na mobile -->
                                                 <th class="dashboard-clients__th dashboard-clients__th--not-sortable">Actions</th>
                                                 <th class="dashboard-clients__th">ID</th>
                                                 <th class="dashboard-clients__th">First Name</th>
@@ -323,19 +323,19 @@
                                         </thead>
                                         <tbody class="dashboard-clients__tbody">
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">13/08/2018</td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">13/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
                                                     <span class="dashboard-clients__onboarding dashboard-clients__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <input class="dashboard-clients__toggler" id="more-actions" type="checkbox">
                                                     <label class="dashboard-clients__dots" for="more-actions"></label>
                                                     <ul class="dashboard-clients__more-actions">
@@ -349,104 +349,104 @@
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">16/08/2018</td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
                                                     <span class="dashboard-clients__onboarding dashboard-clients__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">24/12/2018</td>
-                                                <td class="dashboard-clients__td">
-                                                    <span class="dashboard-clients__onboarding dashboard-clients__onboarding--completed">Completed</span>
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
+                                                    <span class="dashboard-clients__onboarding dashboard-clients__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">24/12/2018</td>
-                                                <td class="dashboard-clients__td">
-                                                    <span class="dashboard-clients__onboarding dashboard-clients__onboarding--completed">Completed</span>
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
+                                                    <span class="dashboard-clients__onboarding dashboard-clients__onboarding--pending">Pending</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">24/12/2018</td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
                                                     <span class="dashboard-clients__onboarding dashboard-clients__onboarding--completed">Completed</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">24/12/2018</td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
                                                     <span class="dashboard-clients__onboarding dashboard-clients__onboarding--completed">Completed</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
                                             <tr class="dashboard-clients__tr">
-                                                <td class="dashboard-clients__td">
-                                                    <i class="material-icons dashboard-clients__action-icon">edit</i>
-                                                    <i class="material-icons dashboard-clients__action-icon">delete</i>
+                                                <td class="dashboard-clients__td" data-title="Actions">
+                                                    <button class="material-icons dashboard-clients__action-icon">edit</button>
+                                                    <button class="material-icons dashboard-clients__action-icon">delete</button>
                                                 </td>
-                                                <td class="dashboard-clients__td">1808</td>
-                                                <td class="dashboard-clients__td">Porste</td>
-                                                <td class="dashboard-clients__td">Sassde</td>
-                                                <td class="dashboard-clients__td">fawe@asdasd.pl</td>
-                                                <td class="dashboard-clients__td">24/12/2018</td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="ID">1808</td>
+                                                <td class="dashboard-clients__td" data-title="First Name">Porste</td>
+                                                <td class="dashboard-clients__td" data-title="Last Name">Sassde</td>
+                                                <td class="dashboard-clients__td" data-title="Email">fawe@asdasd.pl</td>
+                                                <td class="dashboard-clients__td" data-title="Created">16/08/2018</td>
+                                                <td class="dashboard-clients__td" data-title="Onboarding">
                                                     <span class="dashboard-clients__onboarding dashboard-clients__onboarding--completed">Completed</span>
                                                 </td>
-                                                <td class="dashboard-clients__td">
+                                                <td class="dashboard-clients__td" data-title="More Actions">
                                                     <label class="dashboard-clients__dots"></label>
                                                 </td>
                                             </tr>
@@ -498,57 +498,57 @@
                                                 <i class="material-icons sidebar-nav__icon dashboard__calendar-toggler-icon">date_range</i>
                                             </label>
                                             <input id="budget-calendar" class="dashboard__calendar-checkbox" type="checkbox">
-                                            <div class="calendar calendar--secondary">
-                                                <div class="calendar__month-nav">
-                                                    <span class="calendar__switcher calendar__switcher--left"></span>
-                                                    <span class="calendar__month-name">August</span>
-                                                    <span class="calendar__switcher calendar__switcher--right"></span>
+                                            <div class="dashboard-calendar dashboard-calendar--secondary">
+                                                <div class="dashboard-calendar__month-nav">
+                                                    <button class="dashboard-calendar__switcher dashboard-calendar__switcher--left"></button>
+                                                    <span class="dashboard-calendar__month-name">August</span>
+                                                    <button class="dashboard-calendar__switcher dashboard-calendar__switcher--right"></button>
                                                 </div>
-                                                <div class="calendar__labels-wrapper">
-                                                    <span class="calendar__label">Sun</span>
-                                                    <span class="calendar__label">Mon</span>
-                                                    <span class="calendar__label">Tue</span>
-                                                    <span class="calendar__label">Wed</span>
-                                                    <span class="calendar__label">Thu</span>
-                                                    <span class="calendar__label">Fri</span>
-                                                    <span class="calendar__label">Sat</span>
+                                                <div class="dashboard-calendar__labels-wrapper">
+                                                    <span class="dashboard-calendar__label">Sun</span>
+                                                    <span class="dashboard-calendar__label">Mon</span>
+                                                    <span class="dashboard-calendar__label">Tue</span>
+                                                    <span class="dashboard-calendar__label">Wed</span>
+                                                    <span class="dashboard-calendar__label">Thu</span>
+                                                    <span class="dashboard-calendar__label">Fri</span>
+                                                    <span class="dashboard-calendar__label">Sat</span>
                                                 </div>
-                                                <div class="calendar__days-wrapper">
-                                                    <i class="calendar__day calendar__day--inactive">29</i>
-                                                    <i class="calendar__day calendar__day--inactive">30</i>
-                                                    <i class="calendar__day calendar__day--inactive">31</i>
-                                                    <i class="calendar__day">1</i>
-                                                    <i class="calendar__day calendar__day--checked">2</i>
-                                                    <i class="calendar__day calendar__day--checked">3</i>
-                                                    <i class="calendar__day calendar__day--checked">4</i>
-                                                    <i class="calendar__day calendar__day--checked">5</i>
-                                                    <i class="calendar__day calendar__day--checked">6</i>
-                                                    <i class="calendar__day calendar__day--checked">7</i>
-                                                    <i class="calendar__day calendar__day--checked">8</i>
-                                                    <i class="calendar__day calendar__day--checked">9</i>
-                                                    <i class="calendar__day calendar__day--checked">10</i>
-                                                    <i class="calendar__day calendar__day--checked">11</i>
-                                                    <i class="calendar__day calendar__day--checked">12</i>
-                                                    <i class="calendar__day calendar__day--checked">13</i>
-                                                    <i class="calendar__day calendar__day--checked">14</i>
-                                                    <i class="calendar__day calendar__day--checked">15</i>
-                                                    <i class="calendar__day">16</i>
-                                                    <i class="calendar__day">17</i>
-                                                    <i class="calendar__day calendar__day--today">18</i>
-                                                    <i class="calendar__day">19</i>
-                                                    <i class="calendar__day">20</i>
-                                                    <i class="calendar__day">21</i>
-                                                    <i class="calendar__day">22</i>
-                                                    <i class="calendar__day">23</i>
-                                                    <i class="calendar__day">24</i>
-                                                    <i class="calendar__day">25</i>
-                                                    <i class="calendar__day">26</i>
-                                                    <i class="calendar__day">27</i>
-                                                    <i class="calendar__day">28</i>
-                                                    <i class="calendar__day">29</i>
-                                                    <i class="calendar__day">30</i>
-                                                    <i class="calendar__day">31</i>
-                                                    <i class="calendar__day calendar__day--inactive">1</i>
+                                                <div class="dashboard-calendar__days-wrapper">
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--inactive">29</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--inactive">30</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--inactive">31</i>
+                                                    <i class="dashboard-calendar__day">1</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">2</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">3</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">4</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">5</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">6</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">7</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">8</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">9</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">10</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">11</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">12</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">13</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">14</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--checked">15</i>
+                                                    <i class="dashboard-calendar__day">16</i>
+                                                    <i class="dashboard-calendar__day">17</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--today">18</i>
+                                                    <i class="dashboard-calendar__day">19</i>
+                                                    <i class="dashboard-calendar__day">20</i>
+                                                    <i class="dashboard-calendar__day">21</i>
+                                                    <i class="dashboard-calendar__day">22</i>
+                                                    <i class="dashboard-calendar__day">23</i>
+                                                    <i class="dashboard-calendar__day">24</i>
+                                                    <i class="dashboard-calendar__day">25</i>
+                                                    <i class="dashboard-calendar__day">26</i>
+                                                    <i class="dashboard-calendar__day">27</i>
+                                                    <i class="dashboard-calendar__day">28</i>
+                                                    <i class="dashboard-calendar__day">29</i>
+                                                    <i class="dashboard-calendar__day">30</i>
+                                                    <i class="dashboard-calendar__day">31</i>
+                                                    <i class="dashboard-calendar__day dashboard-calendar__day--inactive">1</i>
                                                 </div>
                                             </div>
                                             <div class="dashboard__date-range">

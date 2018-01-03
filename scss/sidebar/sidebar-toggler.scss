@@ -1,92 +1,12 @@
 .sidebar-toggler__checkbox {
     display: none;
-
-    &:checked {
-
-        + .sidebar {
-            width: 3.5rem;
-
-            .sidebar-toggler {
-                width: 100%;
-                height: 3rem;
-            }
-
-            .sidebar-toggler__icon {
-                &::before { transform: rotate(30deg); }
-                &::after { transform: rotate(-30deg); }
-            }
-
-            .sidebar-logo__wrapper {
-                height: 0;
-                overflow: hidden;
-                // Bez transition, ponieważ efekt nieznaczcy.
-            }
-
-            .sidebar-user {
-                padding: 0 .25rem;
-            }
-
-            .sidebar-user__avatar-wrapper {
-                width: 3rem;
-                height: 3rem;
-            }
-
-            .sidebar-user__name {
-                font-size: $font-size-xxs;
-            }
-
-            .sidebar-user__status {
-                font-size: $font-size-xxs;
-            }
-
-            .sidebar-nav__header {
-                // Bez transition, ponieważ efekt nieznaczcy.
-                &::before {
-                    content: attr(data-toggled-shortcut);
-                    margin-right: 2rem;
-                    text-transform: uppercase;
-                }
-
-            }
-
-            .sidebar-nav__item {
-                z-index: 2;
-                overflow: hidden;
-                width: 3.5rem;
-
-                &:hover {
-                    background: $grey-50;
-                    width: 10rem;
-                    box-shadow: $shadow-2; // Bez transition, ponieważ efekt nieznaczcy.
-                }
-
-            }
-
-            .sidebar-nav__notification {
-                right: .25rem;
-                top: .25rem;
-                padding: .1rem .25rem;
-                font-size: .5rem;
-                // Bez transition, ponieważ efekt nieznaczcy.
-            }
-
-        }
-
-        ~ .app__page {
-            width: calc(100% - 3.5rem);
-        }
-
-    }
-
-
-
 }
 
 .sidebar-toggler {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2; // Potrzebne dopiero przy responsive
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -124,6 +44,159 @@
         &::after {
             bottom: 0;
             transform: rotate(30deg);
+        }
+
+    }
+
+}
+
+@media(min-width: 768px) {
+
+    .sidebar-toggler__checkbox {
+
+        &:checked {
+
+            + .sidebar {
+                width: 3.5rem;
+
+                .sidebar-toggler {
+                    width: 100%;
+                    height: 3rem;
+                }
+
+                .sidebar-toggler__icon {
+                    &::before { transform: rotate(30deg); }
+                    &::after { transform: rotate(-30deg); }
+                }
+
+                .sidebar-logo__wrapper {
+                    height: 0;
+                    overflow: hidden;
+                    // Bez transition, ponieważ efekt nieznaczcy.
+                }
+
+                .sidebar-user {
+                    padding: 0 .25rem;
+                }
+
+                .sidebar-user__avatar-wrapper {
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                .sidebar-user__name {
+                    font-size: $font-size-xxs;
+                }
+
+                .sidebar-user__status {
+                    font-size: $font-size-xxs;
+                }
+
+                .sidebar-nav__header {
+                    // Bez transition, ponieważ efekt nieznaczcy.
+                    &::before {
+                        content: attr(data-toggled-shortcut);
+                        margin-right: 2rem;
+                        text-transform: uppercase;
+                    }
+
+                }
+
+                .sidebar-nav__item {
+                    z-index: 2;
+                    overflow: hidden;
+                    width: 3.5rem;
+
+                    &:hover, &:focus {
+                        background: $grey-50;
+                        width: 10rem;
+                        box-shadow: $shadow-2; // Bez transition, ponieważ efekt nieznaczcy.
+                    }
+
+                }
+
+                .sidebar-nav__notification {
+                    right: .25rem;
+                    top: .25rem;
+                    padding: .1rem .25rem;
+                    font-size: .5rem;
+                    // Bez transition, ponieważ efekt nieznaczcy.
+                }
+
+            }
+
+            ~ .app__page {
+                width: calc(100% - 3.5rem);
+            }
+
+        }
+
+    }
+
+}
+
+@media(max-width: 767px) {
+
+    .sidebar-toggler__checkbox {
+
+        &:checked {
+
+            + .sidebar {
+                height: 100vh;
+
+                .sidebar-toggler {
+
+                    .sidebar-toggler__icon {
+                        background: transparent;
+
+                        &::before, &::after {
+                            top: 50%;
+                            left: 50%;
+                        }
+
+                        &::before { transform: translate(-50%, -50%) rotate(-45deg); }
+                        &::after { transform: translate(-50%, -50%) rotate(45deg); }
+
+                    }
+
+                }
+
+                .sidebar__section {
+
+                    &.sidebar__section--logo {
+                        box-shadow: $shadow-3;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .sidebar-toggler {
+        right: .5rem;
+        top: .5rem;
+
+        .sidebar-toggler__icon {
+            height: 3px;
+            width: 20px;
+            background: $grey-300;
+
+            &::before, &::after {
+                transform: none;
+                height: 3px;
+                width: 20px;
+            }
+
+            &::before { top: -6px; }
+            &::after { top: 6px; }
+
+        }
+
+        &:focus, &:hover {
+            .sidebar-toggler__icon { background: $primary; }
         }
 
     }

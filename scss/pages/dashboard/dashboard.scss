@@ -66,7 +66,7 @@
     .dashboard__calendar-checkbox {
         display: none;
 
-        &:checked + .calendar {
+        &:checked + .dashboard-calendar {
             display: block;
         }
 
@@ -99,7 +99,7 @@
         margin: .25rem;
     }
 
-    .calendar {
+    .dashboard-calendar {
         position: absolute;
         left: -.25rem;
         top: -.25rem;
@@ -113,6 +113,74 @@
 
         .pie-chart {
             width: calc(100% / 3);
+        }
+
+    }
+
+}
+
+@media (max-width: 48rem) {
+
+    .dashboard {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 62rem) {
+
+    .dashboard {
+
+        .dashboard__chart-nav {
+            flex-wrap: wrap;
+        }
+
+        .dashboard__chart-link {
+
+            &.dashboard__chart-link--main {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: .5rem;
+                margin: 0;
+            }
+
+        }
+
+        .dashboard__calendar-toggler {
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin: 0;
+        }
+
+        .dashboard__date-range {
+            padding: 1rem;
+        }
+
+        .dashboard__date {
+            line-height: 1.1;
+        }
+
+    }
+
+}
+
+@media (max-width: 48rem) {
+
+    .dashboard {
+
+        .dashboard__charts-wrapper {
+            flex-direction: column;
+        }
+
+        .dashboard__chart-wrapper {
+            width: 100%;
+
+            &:nth-of-type(2) {
+                margin-top: 2rem;
+            }
+
         }
 
     }

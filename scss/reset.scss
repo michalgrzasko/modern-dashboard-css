@@ -15,7 +15,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
     line-height: 1; }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+button {
+    outline: none;
+}
 
 ol, ul {
     list-style: none; }

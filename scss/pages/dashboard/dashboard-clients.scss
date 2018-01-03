@@ -22,8 +22,8 @@
 
     .dashboard-clients__th { // 'T'able 'H'eader
         padding: 0 .25rem;
-        height: 3.5rem;
-        vertical-align: middle;
+        height: 2.5rem;
+        vertical-align: top;
         color: $dark-disabled;
         font-size: $font-size-sm;
         text-align: left;
@@ -106,11 +106,13 @@
         text-align: center;
 
         &.dashboard-clients__onboarding--pending {
-            background: lighten($secondary, 15%)
+            //background: lighten($secondary, 15%)
+            background: $gradient-secondary;
         }
 
         &.dashboard-clients__onboarding--completed {
-            background: adjust-color($primary, $saturation: -20%, $lightness: 15%);
+            //background: adjust-color($primary, $saturation: -20%, $lightness: 15%);
+            background: $gradient-primary;
         }
 
     }
@@ -127,7 +129,7 @@
             //margin-left: -.25rem;
         }
 
-        &:hover {
+        &:hover, &:focus {
             color: $primary;
         }
 
@@ -243,5 +245,79 @@
         }
 
     }
+
+}
+
+@media (max-width: 62rem) {
+
+    .dashboard-clients {
+
+        .dashboard-clients__tr {
+            display: block;
+            margin-left: -1rem;
+            margin-right: -1rem;
+
+            &:nth-of-type(even) {
+                background: $grey-100;
+            }
+
+            &.dashboard-clients__tr--heading {
+                position: absolute;
+                left: -99999rem;
+                top: -99999rem;
+            }
+
+        }
+
+        .dashboard-clients__td {
+            display: flex;
+            align-items: center;
+            padding-left: 50%;
+            height: 2rem;
+
+            &::before {
+                content: attr(data-title);
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+
+        .dashboard-clients__onboarding {
+            width: auto;
+            font-weight: $font-weight-bold;
+
+            &.dashboard-clients__onboarding--pending {
+                color: $secondary;
+                background: none;
+            }
+
+            &.dashboard-clients__onboarding--completed {
+                color: $primary;
+                background: none;
+            }
+
+        }
+
+        .dashboard-clients__more-actions {
+            left: 0;
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+    }
+
+}
+
+@media (max-width: 30rem) {
+    //
+    //.dashboard-clients {
+    //
+    //    .dashboard-clients__td {
+    //        padding-left: 30%;
+    //    }
+    //
+    //}
 
 }

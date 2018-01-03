@@ -1,4 +1,3 @@
 // I promise I know JavaScript :)
 //
-// Michał Grząśko
-// linkedin.com/in/grzasko/
+// https://www.linkedin.com/in/grzasko/
