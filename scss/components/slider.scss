@@ -1,16 +1,16 @@
 $candidates-number: 6;
 $candidates-percentage: 100% / $candidates-number;
 
-@keyframes candidates-slider {
+@keyframes sliding {
 
     0% { transform: translateX(0); }
     100% { transform: translateX(-$candidates-percentage); }
 
 }
 
-.dashboard-candidates {
+.slider {
 
-    .dashboard-candidates__mask {
+    .slider__mask {
         width: 100%;
         position: relative;
         overflow: hidden;
@@ -37,16 +37,16 @@ $candidates-percentage: 100% / $candidates-number;
 
     }
 
-    .dashboard-candidates__wrapper {
+    .slider__wrapper {
         width: calc(25% * #{$candidates-number});
         left: 0;
         top: 0;
         display: flex;
         flex-direction: row;
-        animation: candidates-slider 20s infinite alternate-reverse linear;
+        animation: sliding 20s infinite alternate-reverse linear;
     }
 
-    .dashboard-candidates__card {
+    .slider__card {
         width: calc(100% / #{$candidates-number} - 2rem);
         text-align: center;
         box-shadow: $shadow-2;
@@ -54,34 +54,34 @@ $candidates-percentage: 100% / $candidates-number;
         background: $white;
     }
 
-    .dashboard-candidates__info-wrapper {
+    .slider__info-wrapper {
         padding: 1rem;
         margin: .5rem 0;
     }
 
-    .dashboard-candidates__avatar {
+    .slider__avatar {
         border-radius: 50%;
         box-shadow: $shadow-3;
         max-width: 100%;
     }
 
-    .dashboard-candidates__name {
+    .slider__name {
         margin-top: 1.5rem;
         color: $dark-disabled;
     }
 
-    .dashboard-candidates__position {
+    .slider__position {
         font-size: $font-size-lg;
         display: block;
         margin-top: .5rem;
     }
 
-    .dashboard-candidates__icons-wrapper {
+    .slider__icons-wrapper {
         display: flex;
         flex-direction: row;
     }
 
-    .dashboard-candidates__icon-wrapper {
+    .slider__icon-wrapper {
         width: calc(100% / 3);
         display: flex;
         align-items: center;
@@ -89,16 +89,16 @@ $candidates-percentage: 100% / $candidates-number;
         padding: 1rem 0;
         position: relative;
 
-        &.dashboard-candidates__icon-wrapper--favourite {
+        &.slider__icon-wrapper--favourite {
 
         }
 
     }
 
-    .dashboard-candidates__star-checkbox {
+    .slider__star-checkbox {
         display: none;
 
-        &:checked + .dashboard-candidates__star-icon {
+        &:checked + .slider__star-icon {
 
             &::before { opacity: 0; }
             &::after { opacity: 1; }
@@ -107,7 +107,7 @@ $candidates-percentage: 100% / $candidates-number;
 
     }
 
-    .dashboard-candidates__star-icon {
+    .slider__star-icon {
         position: absolute;
         left: 0;
         top: 0;
@@ -144,9 +144,9 @@ $candidates-percentage: 100% / $candidates-number;
 
 @media (max-width: 75rem) {
 
-    .dashboard-candidates {
+    .slider {
 
-        .dashboard-candidates__wrapper { width: calc(100% / 3 * #{$candidates-number}); }
+        .slider__wrapper { width: calc(100% / 3 * #{$candidates-number}); }
 
     }
 
@@ -154,9 +154,9 @@ $candidates-percentage: 100% / $candidates-number;
 
 @media (max-width: 62rem) {
 
-    .dashboard-candidates {
+    .slider {
 
-        .dashboard-candidates__wrapper { width: calc(50% * #{$candidates-number}); }
+        .slider__wrapper { width: calc(50% * #{$candidates-number}); }
 
     }
 
@@ -164,11 +164,11 @@ $candidates-percentage: 100% / $candidates-number;
 
 @media (max-width: 30rem) {
 
-    .dashboard-candidates {
+    .slider {
 
-        .dashboard-candidates__wrapper { width: calc(100% * #{$candidates-number}); }
+        .slider__wrapper { width: calc(100% * #{$candidates-number}); }
 
-        .dashboard-candidates__info-wrapper { padding: 0 1rem; }
+        .slider__info-wrapper { padding: 0 1rem; }
 
     }
 

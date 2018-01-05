@@ -1,26 +1,26 @@
-.dashboard-clients {
+.table {
 
-    .dashboard-clients__table {
+    .table__table {
         width: 100%;
     }
 
-    .dashboard-clients__thead {
+    .table__thead {
         //box-shadow: $shadow-2;
 
     }
 
-    .dashboard-clients__tbody {
+    .table__tbody {
 
     }
 
-    .dashboard-clients__tr {
+    .table__tr {
         border-bottom: 1px solid $grey-100;
 
         &:nth-of-type(even) { background: $grey-50; }
 
     }
 
-    .dashboard-clients__th { // 'T'able 'H'eader
+    .table__th { // 'T'able 'H'eader
         padding: 0 .25rem;
         height: 2.5rem;
         vertical-align: top;
@@ -30,7 +30,7 @@
         font-weight: $font-weight-bold;
         transition: color $transition-duration;
 
-        &:not(.dashboard-clients__th--not-sortable) { // "Actions" nie można sortować.
+        &:not(.table__th--not-sortable) { // "Actions" nie można sortować.
             cursor: pointer;
 
             &:hover {
@@ -56,7 +56,7 @@
             transition-duration: $transition-duration;
         }
 
-        &.dashboard-clients__th--sort-asc {
+        &.table__th--sort-asc {
             color: $primary;
 
             &::after { opacity: 1; }
@@ -70,7 +70,7 @@
 
          }
 
-        &.dashboard-clients__th--sort-desc {
+        &.table__th--sort-desc {
             color: $primary;
 
             &::after {
@@ -89,7 +89,7 @@
 
     }
 
-    .dashboard-clients__td { // 'T'able 'D'ata
+    .table__td { // 'T'able 'D'ata
         padding: 0 .25rem;
         height: 3.5rem;
         vertical-align: middle;
@@ -97,7 +97,7 @@
         position: relative; // Do pozycjonownia dropdownu w More Actions
     }
 
-    .dashboard-clients__onboarding {
+    .table__onboarding {
         display: block;
         color: $white;
         border-radius: 1rem;
@@ -105,19 +105,19 @@
         padding: .5rem 0;
         text-align: center;
 
-        &.dashboard-clients__onboarding--pending {
+        &.table__onboarding--pending {
             //background: lighten($secondary, 15%)
             background: $gradient-secondary;
         }
 
-        &.dashboard-clients__onboarding--completed {
+        &.table__onboarding--completed {
             //background: adjust-color($primary, $saturation: -20%, $lightness: 15%);
             background: $gradient-primary;
         }
 
     }
 
-    .dashboard-clients__action-icon {
+    .table__action-icon {
         cursor: pointer;
         font-size: $font-size-lg;
         padding: .5rem;
@@ -135,7 +135,7 @@
 
     }
 
-    .dashboard-clients__dots {
+    .table__dots {
         cursor: pointer;
         display: inline-block;
         padding: .5rem;
@@ -164,12 +164,12 @@
 
     }
 
-    .dashboard-clients__toggler {
+    .table__toggler {
         display: none;
 
         &:checked {
 
-            + .dashboard-clients__dots {
+            + .table__dots {
 
                 &::before {
                     background: $primary;
@@ -184,10 +184,10 @@
 
             }
 
-            ~ .dashboard-clients__more-actions {
+            ~ .table__more-actions {
                 display: block;
 
-                .dashboard-clients__action {
+                .table__action {
                     height: 3rem;
                     opacity: 1;
                 }
@@ -198,7 +198,7 @@
 
     }
 
-    .dashboard-clients__more-actions {
+    .table__more-actions {
         position: absolute;
         z-index: 1;
         right: 0;
@@ -207,7 +207,7 @@
         box-shadow: $shadow-2;
     }
 
-    .dashboard-clients__action {
+    .table__action {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -231,12 +231,12 @@
             font-size: $font-size-lg;
         }
 
-        &.dashboard-clients__action--edit::before { content: 'edit'; }
-        &.dashboard-clients__action--remove::before { content: 'delete'; }
-        &.dashboard-clients__action--email::before { content: 'mail'; }
-        &.dashboard-clients__action--message::before { content: 'message'; }
-        &.dashboard-clients__action--note::before { content: 'note_add'; }
-        &.dashboard-clients__action--json::before { content: 'code'; }
+        &.table__action--edit::before { content: 'edit'; }
+        &.table__action--remove::before { content: 'delete'; }
+        &.table__action--email::before { content: 'mail'; }
+        &.table__action--message::before { content: 'message'; }
+        &.table__action--note::before { content: 'note_add'; }
+        &.table__action--json::before { content: 'code'; }
 
         &:hover {
             z-index: 1;
@@ -250,9 +250,9 @@
 
 @media (max-width: 62rem) {
 
-    .dashboard-clients {
+    .table {
 
-        .dashboard-clients__tr {
+        .table__tr {
             display: block;
             margin-left: -1rem;
             margin-right: -1rem;
@@ -261,7 +261,7 @@
                 background: $grey-100;
             }
 
-            &.dashboard-clients__tr--heading {
+            &.table__tr--heading {
                 position: absolute;
                 left: -99999rem;
                 top: -99999rem;
@@ -269,7 +269,7 @@
 
         }
 
-        .dashboard-clients__td {
+        .table__td {
             display: flex;
             align-items: center;
             padding-left: 50%;
@@ -285,23 +285,23 @@
 
         }
 
-        .dashboard-clients__onboarding {
+        .table__onboarding {
             width: auto;
             font-weight: $font-weight-bold;
 
-            &.dashboard-clients__onboarding--pending {
+            &.table__onboarding--pending {
                 color: $secondary;
                 background: none;
             }
 
-            &.dashboard-clients__onboarding--completed {
+            &.table__onboarding--completed {
                 color: $primary;
                 background: none;
             }
 
         }
 
-        .dashboard-clients__more-actions {
+        .table__more-actions {
             left: 0;
             box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
         }
@@ -312,9 +312,9 @@
 
 @media (max-width: 30rem) {
     //
-    //.dashboard-clients {
+    //.table {
     //
-    //    .dashboard-clients__td {
+    //    .table__td {
     //        padding-left: 30%;
     //    }
     //

@@ -21,10 +21,9 @@
 
 // Dashboard
 @import "pages/dashboard/dashboard";
-@import "pages/dashboard/dashboard-clients";
-@import 'pages/dashboard/calendar';
-@import 'pages/dashboard/progress-chart';
-@import 'pages/dashboard/pie-chart';
-@import 'pages/dashboard/pie-chart-nav';
-@import 'pages/dashboard/dashboard-candidates';
-@import 'pages/dashboard/dashboard-form';
+@import "components/table";
+@import 'components/calendar';
+@import 'components/progress-chart';
+@import 'components/pie-chart';
+@import 'components/pie-chart-nav';
+@import 'components/slider';
