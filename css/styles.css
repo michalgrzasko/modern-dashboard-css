@@ -285,6 +285,9 @@ table {
 /**
  *  Zmienne.
  */
+/*
+ * Zmienne dla kolorów flag.
+ */
 /**
  * Klasy reużywalne w obrębie całego projektu.
  */
@@ -392,25 +395,41 @@ h3 {
       width: 100%;
       top: 3rem; } }
 
+@-webkit-keyframes button-hover {
+  50% {
+    background-position: 0 0; } }
+
+@keyframes button-hover {
+  50% {
+    background-position: 0 0; } }
+
 .button-prototype, .button {
   display: inline-block;
   color: #fff;
   padding: 1rem;
   font-size: 1rem;
   border-radius: 2rem;
-  background: -webkit-linear-gradient(45deg, #9c27b0 0, #c654d9 50%, #9c27b0 100%);
-  background: -o-linear-gradient(45deg, #9c27b0 0, #c654d9 50%, #9c27b0 100%);
-  background: linear-gradient(45deg, #9c27b0 0, #c654d9 50%, #9c27b0 100%);
+  background: -webkit-linear-gradient(45deg, #ce1126 0, #c654d9 50%, #9c27b0) 100% 0;
+  background: -o-linear-gradient(45deg, #ce1126 0, #c654d9 50%, #9c27b0) 100% 0;
+  background: linear-gradient(45deg, #ce1126 0, #c654d9 50%, #9c27b0) 100% 0;
+  background-size: 300% 300%;
   -webkit-box-shadow: 0 0.75rem 1.25rem rgba(156, 39, 176, 0.2);
           box-shadow: 0 0.75rem 1.25rem rgba(156, 39, 176, 0.2);
   cursor: pointer; }
+  .button-prototype:hover, .button:hover {
+    color: #fff;
+    -webkit-animation: button-hover 1s ease;
+            animation: button-hover 1s ease; }
 
 .button.button--secondary {
-  background: -webkit-linear-gradient(45deg, #ffa726 0, #ffc673 75%, #ffa726 100%);
-  background: -o-linear-gradient(45deg, #ffa726 0, #ffc673 75%, #ffa726 100%);
-  background: linear-gradient(45deg, #ffa726 0, #ffc673 75%, #ffa726 100%);
+  background-image: -webkit-linear-gradient(45deg, #f29000 0, #ffc673 75%, #ffa726 100%);
+  background-image: -o-linear-gradient(45deg, #f29000 0, #ffc673 75%, #ffa726 100%);
+  background-image: linear-gradient(45deg, #f29000 0, #ffc673 75%, #ffa726 100%);
   -webkit-box-shadow: 0 0.75rem 1.25rem rgba(255, 167, 38, 0.2);
           box-shadow: 0 0.75rem 1.25rem rgba(255, 167, 38, 0.2); }
+  .button.button--secondary:hover {
+    -webkit-animation: button-hover 1s ease;
+            animation: button-hover 1s ease; }
 
 .button.button--outline {
   background: transparent;
@@ -1094,9 +1113,6 @@ h3 {
     -o-transition: opacity 0.2s, font-size 0.2s, text-shadow 0.2s, left 0.2s;
     transition: opacity 0.2s, font-size 0.2s, text-shadow 0.2s, left 0.2s; }
 
-/*
- * Zmienne dla kolorów flag.
- */
 .navbar-lang-switcher {
   position: relative;
   height: inherit;

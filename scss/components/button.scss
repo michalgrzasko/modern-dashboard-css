@@ -1,20 +1,38 @@
+@keyframes button-hover {
+
+    50% { background-position: 0 0; }
+
+}
+
 .button-prototype {
     display: inline-block;
     color: $white;
     padding: 1rem;
     font-size: $font-size-md;
     border-radius: $font-size-md * 2;
-    background: $gradient-primary;
+    background: linear-gradient(45deg, $flag-red 0, lighten($primary, 17%) 50%, $primary) 100% 0;
+    background-size: 300% 300%;
     box-shadow: $shadow-primary;
     cursor: pointer;
+
+    &:hover {
+        color: $white;
+        animation: button-hover 1s ease;
+    }
+
 }
 
 .button {
    @extend .button-prototype;
 
     &.button--secondary {
-        background: $gradient-secondary;
+        background-image: linear-gradient(45deg, darken($secondary, 10%) 0, lighten($secondary, 15%) 75%, $secondary 100%);
         box-shadow: $shadow-secondary;
+
+        &:hover {
+            animation: button-hover 1s ease;
+        }
+
     }
 
     &.button--outline {
