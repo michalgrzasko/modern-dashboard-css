@@ -22,7 +22,7 @@
         opacity: 1;
 
         & + .app {
-            transform: perspective(70rem) translate3d(0, 5rem, 0) rotateX(30deg);
+            transform: perspective(70rem) rotateX(30deg);
         }
 
     }
@@ -77,6 +77,25 @@
         opacity: 0;
         transform: translateY(-50%);
         transition: opacity $transition-duration, font-size $transition-duration, text-shadow $transition-duration, left $transition-duration;
+    }
+
+}
+
+@media (max-width: 62rem) {
+
+    .navbar-search__input {
+        transform: translateX(-50%);
+
+        &:focus {
+            width: calc(100% - 2rem);
+            top: 2rem;
+
+            & + .app {
+                transform: translateY(8rem);
+            }
+
+        }
+
     }
 
 }

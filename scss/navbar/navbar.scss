@@ -25,3 +25,13 @@
     }
 
 }
+
+@media (max-width: 48rem) {
+
+    .navbar {
+
+        .navbar__section.navbar__section--navbar-user { display: none; }
+
+    }
+
+}
