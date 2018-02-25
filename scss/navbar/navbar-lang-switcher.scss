@@ -53,7 +53,7 @@
 
         /* Flaga Polski */
         &.navbar-lang-switcher__flag--polish {
-            background-image: linear-gradient(top, // z góry do dołu
+            background-image: linear-gradient(to bottom, // z góry do dołu
                 $flag-white 50%, // 0 - 50% - biały
                 $flag-red 50% // 50% - 100% - czerwony
             );
@@ -61,7 +61,7 @@
 
         /* Flaga Włoch */
         &.navbar-lang-switcher__flag--italy {
-            background-image: linear-gradient(left, // od lewej do prawej
+            background-image: linear-gradient(to right, // od lewej do prawej
                 $flag-green 33%, // 0 - 33% - zielony
                 $flag-white 33%, $flag-white 66%, // 33 - 66% - biały
                 $flag-red 66% // 66% - 100% - czerwony
@@ -70,7 +70,7 @@
 
         /* Flaga Grecji */
         &.navbar-lang-switcher__flag--greece {
-            background-image: linear-gradient(top,
+            background-image: linear-gradient(to bottom,
                 $flag-blue 11%, // 0 - 11% niebieski
                 $flag-white 11%, $flag-white 22%, // 11% - 22% biały
                 $flag-blue 22%, $flag-blue 33%,
@@ -90,12 +90,12 @@
                 width: 50%;
                 height: 50%;
                 background-image:
-                    linear-gradient(top, // ten gradient musi być pierwszy, aby przykrył drugi gradient
+                    linear-gradient(to bottom, // ten gradient musi być pierwszy, aby przykrył drugi gradient
                             transparent 40%,
                             $flag-white 40%, $flag-white 60%,
                             transparent 60%
                     ),
-                    linear-gradient(left,
+                    linear-gradient(to right,
                         $flag-blue 40%,
                         $flag-white 40%, $flag-white 60%,
                         $flag-blue 60%
@@ -106,7 +106,7 @@
 
         /* Flaga Czech */
         &.navbar-lang-switcher__flag--czech-republic {
-            background-image: linear-gradient(top,
+            background-image: linear-gradient(to bottom,
                 $flag-white 50%,
                 $flag-red 50%
             );
@@ -158,7 +158,7 @@
 
         /* Flaga Grenadyny */
         &.navbar-lang-switcher__flag--grenadines {
-            background-image: linear-gradient(left,
+            background-image: linear-gradient(to right,
                 $flag-blue 25%,
                 $flag-yellow 25%, $flag-yellow 75%,
                 $flag-green 75%
@@ -182,12 +182,12 @@
         &.navbar-lang-switcher__flag--maldives {
             background-color: $flag-green;
             background-image:
-                linear-gradient(left, // Najpierw czerwone gradienty, aby przykryły zielone kółko tworzące półksiężyc
+                linear-gradient(to right, // Najpierw czerwone gradienty, aby przykryły zielone kółko tworzące półksiężyc
                         $flag-red 16%,
                         transparent 16%, transparent 84%,
                         $flag-red 84%
                 ),
-                linear-gradient(top,
+                linear-gradient(to bottom,
                         $flag-red 16%,
                         transparent 16%, transparent 84%,
                         $flag-red 84%
@@ -213,7 +213,7 @@
             //    $flag-white 88%, $flag-white 92%,
             //    $flag-red 92%
             //);
-            background-image: linear-gradient(top,
+            background-image: linear-gradient(to bottom,
                     $flag-red 11%,
                     $flag-white 11%, $flag-white 22%,
                     $flag-red 22%, $flag-red 33%,
