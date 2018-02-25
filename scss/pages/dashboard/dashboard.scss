@@ -114,7 +114,7 @@
     }
 
     .pie-chart {
-        width: calc(100% / 3);
+        width: 50%;
     }
 
     .dashboard__more-charts {
@@ -211,6 +211,8 @@
         }
 
         .dashboard__pie-charts-wrapper { flex-wrap: wrap; }
+
+        .pie-chart { width: 100%; }
 
     }
 

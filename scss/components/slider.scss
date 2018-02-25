@@ -52,6 +52,9 @@ $candidates-percentage: 100% / $candidates-number;
         box-shadow: $shadow-2;
         margin: 0 1rem;
         background: $white;
+        display: flex; // Aby przesunąć ikonki na dól, gdy robią się dziury przez dwie linijki
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .slider__info-wrapper {
