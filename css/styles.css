@@ -1185,17 +1185,17 @@ h3 {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #ce1126));
       background-image: -webkit-linear-gradient(top, #fff 50%, #ce1126 50%);
       background-image: -o-linear-gradient(top, #fff 50%, #ce1126 50%);
-      background-image: linear-gradient(top, #fff 50%, #ce1126 50%); }
+      background-image: linear-gradient(to bottom, #fff 50%, #ce1126 50%); }
     .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--italy {
       background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #009639), color-stop(33%, #fff), color-stop(66%, #fff), color-stop(66%, #ce1126));
       background-image: -webkit-linear-gradient(left, #009639 33%, #fff 33%, #fff 66%, #ce1126 66%);
       background-image: -o-linear-gradient(left, #009639 33%, #fff 33%, #fff 66%, #ce1126 66%);
-      background-image: linear-gradient(left, #009639 33%, #fff 33%, #fff 66%, #ce1126 66%); }
+      background-image: linear-gradient(to right, #009639 33%, #fff 33%, #fff 66%, #ce1126 66%); }
     .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(11%, #005eb8), color-stop(11%, #fff), color-stop(22%, #fff), color-stop(22%, #005eb8), color-stop(33%, #005eb8), color-stop(33%, #fff), color-stop(44%, #fff), color-stop(44%, #005eb8), color-stop(55%, #005eb8), color-stop(55%, #fff), color-stop(66%, #fff), color-stop(66%, #005eb8), color-stop(77%, #005eb8), color-stop(77%, #fff), color-stop(88%, #fff), color-stop(88%, #005eb8));
       background-image: -webkit-linear-gradient(top, #005eb8 11%, #fff 11%, #fff 22%, #005eb8 22%, #005eb8 33%, #fff 33%, #fff 44%, #005eb8 44%, #005eb8 55%, #fff 55%, #fff 66%, #005eb8 66%, #005eb8 77%, #fff 77%, #fff 88%, #005eb8 88%);
       background-image: -o-linear-gradient(top, #005eb8 11%, #fff 11%, #fff 22%, #005eb8 22%, #005eb8 33%, #fff 33%, #fff 44%, #005eb8 44%, #005eb8 55%, #fff 55%, #fff 66%, #005eb8 66%, #005eb8 77%, #fff 77%, #fff 88%, #005eb8 88%);
-      background-image: linear-gradient(top, #005eb8 11%, #fff 11%, #fff 22%, #005eb8 22%, #005eb8 33%, #fff 33%, #fff 44%, #005eb8 44%, #005eb8 55%, #fff 55%, #fff 66%, #005eb8 66%, #005eb8 77%, #fff 77%, #fff 88%, #005eb8 88%); }
+      background-image: linear-gradient(to bottom, #005eb8 11%, #fff 11%, #fff 22%, #005eb8 22%, #005eb8 33%, #fff 33%, #fff 44%, #005eb8 44%, #005eb8 55%, #fff 55%, #fff 66%, #005eb8 66%, #005eb8 77%, #fff 77%, #fff 88%, #005eb8 88%); }
       .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--greece::after {
         content: '';
         position: absolute;
@@ -1206,12 +1206,12 @@ h3 {
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #fff), color-stop(60%, #fff), color-stop(60%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(40%, #005eb8), color-stop(40%, #fff), color-stop(60%, #fff), color-stop(60%, #005eb8));
         background-image: -webkit-linear-gradient(top, transparent 40%, #fff 40%, #fff 60%, transparent 60%), -webkit-linear-gradient(left, #005eb8 40%, #fff 40%, #fff 60%, #005eb8 60%);
         background-image: -o-linear-gradient(top, transparent 40%, #fff 40%, #fff 60%, transparent 60%), -o-linear-gradient(left, #005eb8 40%, #fff 40%, #fff 60%, #005eb8 60%);
-        background-image: linear-gradient(top, transparent 40%, #fff 40%, #fff 60%, transparent 60%), linear-gradient(left, #005eb8 40%, #fff 40%, #fff 60%, #005eb8 60%); }
+        background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%, transparent 60%), linear-gradient(to right, #005eb8 40%, #fff 40%, #fff 60%, #005eb8 60%); }
     .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czech-republic {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fff), color-stop(50%, #ce1126));
       background-image: -webkit-linear-gradient(top, #fff 50%, #ce1126 50%);
       background-image: -o-linear-gradient(top, #fff 50%, #ce1126 50%);
-      background-image: linear-gradient(top, #fff 50%, #ce1126 50%); }
+      background-image: linear-gradient(to bottom, #fff 50%, #ce1126 50%); }
       .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--czech-republic::after {
         content: '';
         position: absolute;
@@ -1230,7 +1230,7 @@ h3 {
       background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, #005eb8), color-stop(25%, #fed141), color-stop(75%, #fed141), color-stop(75%, #009639));
       background-image: -webkit-linear-gradient(left, #005eb8 25%, #fed141 25%, #fed141 75%, #009639 75%);
       background-image: -o-linear-gradient(left, #005eb8 25%, #fed141 25%, #fed141 75%, #009639 75%);
-      background-image: linear-gradient(left, #005eb8 25%, #fed141 25%, #fed141 75%, #009639 75%); }
+      background-image: linear-gradient(to right, #005eb8 25%, #fed141 25%, #fed141 75%, #009639 75%); }
       .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--grenadines::after {
         content: '';
         position: absolute;
@@ -1249,12 +1249,12 @@ h3 {
       background-image: -webkit-gradient(linear, left top, right top, color-stop(16%, #ce1126), color-stop(16%, transparent), color-stop(84%, transparent), color-stop(84%, #ce1126)), -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ce1126), color-stop(16%, transparent), color-stop(84%, transparent), color-stop(84%, #ce1126)), radial-gradient(circle at calc(50% + .3rem), #009639 0.35rem, transparent 0.4rem), radial-gradient(circle at calc(50% + .1rem), #fff 0.35rem, transparent 0.4rem);
       background-image: -webkit-linear-gradient(left, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), -webkit-linear-gradient(top, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), -webkit-radial-gradient(calc(50% + .3rem), circle, #009639 0.35rem, transparent 0.4rem), -webkit-radial-gradient(calc(50% + .1rem), circle, #fff 0.35rem, transparent 0.4rem);
       background-image: -o-linear-gradient(left, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), -o-linear-gradient(top, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), -o-radial-gradient(calc(50% + .3rem), circle, #009639 0.35rem, transparent 0.4rem), -o-radial-gradient(calc(50% + .1rem), circle, #fff 0.35rem, transparent 0.4rem);
-      background-image: linear-gradient(left, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), linear-gradient(top, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), radial-gradient(circle at calc(50% + .3rem), #009639 0.35rem, transparent 0.4rem), radial-gradient(circle at calc(50% + .1rem), #fff 0.35rem, transparent 0.4rem); }
+      background-image: linear-gradient(to right, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), linear-gradient(to bottom, #ce1126 16%, transparent 16%, transparent 84%, #ce1126 84%), radial-gradient(circle at calc(50% + .3rem), #009639 0.35rem, transparent 0.4rem), radial-gradient(circle at calc(50% + .1rem), #fff 0.35rem, transparent 0.4rem); }
     .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--united-states {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(11%, #ce1126), color-stop(11%, #fff), color-stop(22%, #fff), color-stop(22%, #ce1126), color-stop(33%, #ce1126), color-stop(33%, #fff), color-stop(44%, #fff), color-stop(44%, #ce1126), color-stop(55%, #ce1126), color-stop(55%, #fff), color-stop(66%, #fff), color-stop(66%, #ce1126), color-stop(77%, #ce1126), color-stop(77%, #fff), color-stop(88%, #fff), color-stop(88%, #ce1126));
       background-image: -webkit-linear-gradient(top, #ce1126 11%, #fff 11%, #fff 22%, #ce1126 22%, #ce1126 33%, #fff 33%, #fff 44%, #ce1126 44%, #ce1126 55%, #fff 55%, #fff 66%, #ce1126 66%, #ce1126 77%, #fff 77%, #fff 88%, #ce1126 88%);
       background-image: -o-linear-gradient(top, #ce1126 11%, #fff 11%, #fff 22%, #ce1126 22%, #ce1126 33%, #fff 33%, #fff 44%, #ce1126 44%, #ce1126 55%, #fff 55%, #fff 66%, #ce1126 66%, #ce1126 77%, #fff 77%, #fff 88%, #ce1126 88%);
-      background-image: linear-gradient(top, #ce1126 11%, #fff 11%, #fff 22%, #ce1126 22%, #ce1126 33%, #fff 33%, #fff 44%, #ce1126 44%, #ce1126 55%, #fff 55%, #fff 66%, #ce1126 66%, #ce1126 77%, #fff 77%, #fff 88%, #ce1126 88%); }
+      background-image: linear-gradient(to bottom, #ce1126 11%, #fff 11%, #fff 22%, #ce1126 22%, #ce1126 33%, #fff 33%, #fff 44%, #ce1126 44%, #ce1126 55%, #fff 55%, #fff 66%, #ce1126 66%, #ce1126 77%, #fff 77%, #fff 88%, #ce1126 88%); }
       .navbar-lang-switcher .navbar-lang-switcher__flag.navbar-lang-switcher__flag--united-states::before {
         content: '';
         position: absolute;
@@ -3012,13 +3012,13 @@ h3 {
     background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), color-stop(50%, transparent));
     background-image: -webkit-linear-gradient(left, #fafafa, transparent 50%);
     background-image: -o-linear-gradient(left, #fafafa, transparent 50%);
-    background-image: linear-gradient(left, #fafafa, transparent 50%); }
+    background-image: linear-gradient(to right, #fafafa, transparent 50%); }
   .slider .slider__mask::after {
     right: 0;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), to(#fafafa));
     background-image: -webkit-linear-gradient(left, transparent 50%, #fafafa);
     background-image: -o-linear-gradient(left, transparent 50%, #fafafa);
-    background-image: linear-gradient(left, transparent 50%, #fafafa); }
+    background-image: linear-gradient(to right, transparent 50%, #fafafa); }
 
 .slider .slider__wrapper {
   width: calc(25% * 6);
