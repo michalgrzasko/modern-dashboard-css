@@ -5,6 +5,12 @@
 
 // Components.
 @import 'components/button';
+@import "components/table";
+@import 'components/calendar';
+@import 'components/progress-chart';
+@import 'components/pie-chart';
+@import 'components/pie-chart-nav';
+@import 'components/slider';
 
 // Sidebar.
 @import 'sidebar/sidebar';
@@ -21,9 +27,3 @@
 
 // Dashboard
 @import "pages/dashboard/dashboard";
-@import "components/table";
-@import 'components/calendar';
-@import 'components/progress-chart';
-@import 'components/pie-chart';
-@import 'components/pie-chart-nav';
-@import 'components/slider';
