@@ -1992,7 +1992,7 @@ h3 {
 
 .sidebar {
   width: 12rem;
-  background: #fff;
+  background: #fafafa;
   position: relative;
   -webkit-transition: width 0.2s;
   -o-transition: width 0.2s;
